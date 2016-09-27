@@ -4,14 +4,14 @@ Bienvenido al tour interactivo de *Lenguaje de programación D*.
 
 {{#dmanmobile}}
 
-Este tour ofrece una visión general de este __potente___ y __expresivo__
+Este tour ofrece una visión general de este __potente__ y __expresivo__
 lenguaje que compila directamente a código máquina __nativo__, __eficiente__.
 
 {{/dmanmobile}}
 
 ### ¿Qué es D?
 
-D es la culminación de décadas de experiencia implementando compiladores_
+D es la culminación de décadas de experiencia implementando __compiladores__
 para muchos diversos lenguajes, y tiene un lárgo número de 
 [características únicas](http://dlang.org/overview.html):
 
