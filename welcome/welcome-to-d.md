@@ -1,11 +1,11 @@
 # Bienvenido a D
 
-Bienvenido al tour interactivo de *Lenguaje de programación D*.
+Bienvenido al tour interactivo del *lenguaje de programación D*.
 
 {{#dmanmobile}}
 
 Este tour ofrece una visión general de este __potente__ y __expresivo__
-lenguaje que compila directamente a código máquina __nativo__, __eficiente__.
+lenguaje que compila directamente a código de máquina __nativo__ y __eficiente__.
 
 {{/dmanmobile}}
 
@@ -18,17 +18,17 @@ para muchos diversos lenguajes, y tiene un lárgo número de
 {{#dmandesktop}}
 
 - constructores de _alto nivel_ para un gran poder de modelado
-- _alto rendimiento_, lenguaje compilado
-- tipo estático
+- lenguaje compilado de _alto rendimiento_
+- tipos estáticos
 - evolución de C++ (sin errores)
-- interfaz directa con el API del sistema operativo y el hardware
+- interfaz directa con la API del sistema operativo y el hardware
 - tiempos de compilación extraordinarios
 - permite el manejo seguro de memoria (SafeD)
-- código _mantenible_, _legible_
+- código _mantenible_ y _legible_
 - curva de aprendizaje corta (sintaxis C, similar a Java y otros)
-- compatible con aplicaciones C de interfaz binaria
+- compatible con la interfaz binaria de aplicaciones de C
 - multi-paradigma (imperativo, estructurado, orientado a objetos, genérico, pureza de programación funcional, e incluso de ensamblador)
-- prevención de errores incorporada (contracts, unittests)
+- prevención de errores incorporada (contratos, unittests)
 
 ... y muchas más [características](http://dlang.org/overview.html).
 
@@ -50,7 +50,7 @@ y estamos alegres de aportar solicitudes para mejorarlo.
 ```d
 import std.stdio;
 
-// ¡Vámonos!
+// ¡Empecemos!
 void main()
 {
     writeln("¡Hola mundo!");
