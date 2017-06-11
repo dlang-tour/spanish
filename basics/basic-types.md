@@ -105,26 +105,27 @@ import std.stdio : writeln;
 
 void main()
 {
-    // Big numbers can be separated
-    // with an underscore "_"
-    // to enhance readability.
+    // Números grandes pueden ser separados
+    // con un guión bajo "_"
+    // para mejor legibilidad.
     int b = 7_000_000;
-    short c = cast(short) b; // cast needed
-    uint d = b; // fine
+    short c = cast(short) b; // cast necesario
+    uint d = b; // está bien
     int g;
     assert(g == 0);
 
-    auto f = 3.1415f; // f denotes a float
+    auto f = 3.1415f; // f indica que es float
 
-    // typeid(VAR) returns the type information
-    // of an expression.
-    writeln("type of f is ", typeid(f));
-    double pi = f; // fine
-    // for floating-point types
-    // implicit down-casting is allowed
+    // typeid(VAR) retorna información del tipo
+    // de una expresión.
+    writeln("el tipo de f es ", typeid(f));
+    double pi = f; // está bien
+    // para tipos de punto flotante
+    // se permite conversiones implícitas
+    // a tipos de menor precisión
     float demoted = pi;
 
-    // access to type properties
+    // acceso a las propiedades de los tipos
     assert(int.init == 0);
     assert(int.sizeof == 4);
     assert(bool.max == 1);
