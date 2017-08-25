@@ -5,7 +5,7 @@ tamaño **independientemente** de la plataforma, siendo el
 tipo `real` la única excepción, proveyendo la mayor precisión
 de punto flotante disponible. No hay diferencias en el tamaño
 de un entero independientemente de si la aplicación es
-compilada para sistemas de 32 o 64 bits.
+compilada para sistemas de 32 ó 64 bits.
 
 | tipo                          | tamaño
 |-------------------------------|------------
