@@ -27,59 +27,54 @@ El prefijo `u` denota tipos *sin signo*. `char` especifica
 caracteres UTF-8, `wchar` es usado en cadenas UTF-16, y `dchar`
 en cadenas UTF-32.
 
-Conversiones entre variables de tipos distintos es únicamente
-permitida por el compilador si no se pierde precisión. Sin
-embargo, conversiones entre tipos de punto flotante (ej.
-`double` a `float`) sí son permitidas.
-
-A conversion between variables of different types is only
-allowed by the compiler if no precision is lost. However,
-a conversion between floating point types
-(e.g `double` to `float`) is allowed.
+Las conversiones entre variables de tipos distintos solo son
+permitidas por el compilador si no se pierde precisión. Sin
+embargo, las conversiones entre tipos de punto flotante (ej.
+`double` a `float`) sí están permitidas.
 
 La palabra clave especial `auto` crea una variable e infiere
-su tipo del lado derecho de la expresión. `auto miVar = 7`
-deducirá el tipo `int` para `miVar`. Note que aún así el
-tipo es definido durante la compilación y no puede ser
-cambiado, así como es con cualquier otra variable con un
-tipo asignado explícitamente.
+su tipo a partir del lado derecho de la expresión. `auto miVar = 7`
+deducirá el tipo `int` para `miVar`. Note que aún con `auto` el
+tipo es definido durante la compilación y no podrá ser cambiado
+posteriormente durante la ejecución, al igual que con cualquier
+otra variable con un tipo asignado explícitamente.
 
 ### Propiedades de los tipos
 
-Todos los tipos de datos tienen una propiedad `.init` usada para
-inicialización de variables. Para todos los enteros, esta es `0`
-y para puntos flotantes es `nan` (*no es un número*).
+Todos los tipos de datos tienen una propiedad `.init` usada para la
+inicialización de variables. Para todos los enteros, es `0`
+y para variables de punto flotante es `nan` (*no es un número*).
 
-Tipos enteros y de punto flotante tienen una propiedad `.max`
-para el mayor valor que pueden representar. Tipos enteros también
-tienen una propiedad `.min` para el menor valor que pueden
-representar, mientras que tipos de punto flotante tienen una
-propiedad `.min_normal` que es definida como el menor valor
-normalizado representable que no es 0.
+Los tipos enteros y de punto flotante tienen una propiedad `.max`
+para el máximo valor que pueden representar. Los tipos enteros también
+tienen una propiedad `.min` para el valor más pequeño que pueden
+representar, mientras que los tipos de punto flotante tienen una
+propiedad `.min_normal` que es definida como el mínimo valor
+normalizado representable que no sea 0.
 
-Tipos de punto flotante también tienen las propiedades `.nan`
+los tipos de punto flotante también tienen las propiedades `.nan`
 (el valor NaN), `.infinity` (el valor infinito), `.dig` (el
 número de dígitos decimales de precisión), `.mant_dig`
 (número de bits en la mantisa) y otras más.
 
 Todos los tipos también tienen una propiedad `.stringof`
-que retorna su nombre como una cadena.
+que retorna su nombre como una cadena (de caracteres).
 
-### Índeces en D
+### Índices en D
 
-Los índeces en D normalmente usan el alias de tipo `size_t`,
+Los índices en D normalmente usan el alias de tipo `size_t`,
 pues es un tipo lo suficientemente grande para representar
-un offset hacia toda la memoria direccionable, lo cual es
+un offset/desplazamiento hacia toda la memoria direccionable, el cual es
 `uint` en arquitecturas de 32 bits y `ulong` en 64 bits.
 
 ### Expresión assert
 
 `assert` es una expresión que verifica condiciones en modo
-de depuración y aborta con `AssertionError` si es que
+de depuración y aborta con un `AssertionError` si es que
 falla. `assert(0)` por lo tanto se usa para demarcar
 código al que no se puede llegar.
 
-### Profundizando
+### Profundizar más
 
 Nota: las siguientes referencias están en inglés
 
@@ -98,14 +93,14 @@ Nota: las siguientes referencias están en inglés
 - [Propiedades de tipos](https://dlang.org/spec/property.html)
 - [Expresión assert](https://dlang.org/spec/expression.html#AssertExpression)
 
-## {SourceCode}
+## {Código fuente}
 
 ```d
 import std.stdio : writeln;
 
 void main()
 {
-    // Números grandes pueden ser separados
+    // Los números grandes pueden ser separados
     // con un guión bajo "_"
     // para mejor legibilidad.
     int b = 7_000_000;
