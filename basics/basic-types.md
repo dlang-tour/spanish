@@ -93,7 +93,7 @@ Nota: las siguientes referencias están en inglés
 - [Propiedades de tipos](https://dlang.org/spec/property.html)
 - [Expresión assert](https://dlang.org/spec/expression.html#AssertExpression)
 
-## {Código fuente}
+## {SourceCode}
 
 ```d
 import std.stdio : writeln;

@@ -1,10 +1,10 @@
-title: Las Bases de D
+title: Las bases de D
 ordering:
 - imports-and-modules
 - basic-types
-# - memory
-# - type-qualifiers
-# - controlling-flow
+- memory
+- type-qualifiers
+- controlling-flow
 # - functions
 # - structs
 # - arrays
