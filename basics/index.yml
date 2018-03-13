@@ -1,8 +1,8 @@
-title: Las Bases de D
+title: Las bases de D
 ordering:
 - imports-and-modules
 - basic-types
-# - memory
+- memory
 # - type-qualifiers
 # - controlling-flow
 # - functions
