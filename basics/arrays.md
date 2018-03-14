@@ -32,7 +32,7 @@ expresión `new` y su longitud:
 
 El tipo de `arr` es `int[]`, que también es llamado ***slice***. Los *slices*
 son vistas de un bloque continuo de memoria y serán explicados en más detalle
-en la [siguiente sección](basic/slices). Arrays multidimensionales puede ser
+en la [siguiente sección](basics/slices). Arrays multidimensionales puede ser
 creados fácilmente usando la sintaxis `auto arr = new int[3][3]`.
 
 #### Operaciones y propiedades de los arrays
