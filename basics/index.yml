@@ -5,10 +5,10 @@ ordering:
 - memory
 - type-qualifiers
 - controlling-flow
-# - functions
-# - structs
-# - arrays
-# - slices
+- functions
+- structs
+- arrays
+- slices
 # - alias-strings
 # - loops
 # - foreach
@@ -17,6 +17,6 @@ ordering:
 # - classes
 # - interfaces
 # - templates
-# - delegates
+- delegates
 # - exceptions
 # - further-reading
