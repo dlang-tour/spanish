@@ -100,8 +100,8 @@ inglés— (`` ` ... ` ``) o bien usando el prefijo `r` —de *raw*— (`r" ... 
     string raw  =  `raw "string"`; // cadena sin procesar
     string raw2 = r"raw `string`"; // cadena sin procesar
 
-D provides even more ways to represent strings - don't hesitate
-to [explore](https://dlang.org/spec/lex.html#string_literals) them.
+D proporciona incluso más formas de representar cadenas. No dudes en
+[explorarlas](https://dlang.org/spec/lex.html#string_literals).
 
 ### En profundidad
 

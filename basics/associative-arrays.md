@@ -1,9 +1,9 @@
 # Arrays asociativos
 
-D arrays asociativos incluidos en el propio lenguaje. Estos arrays asociativos
-también son conocidos como *hash maps*. Un array asociativo con una clave
-de tipo cadena de caracteres (`string`) y con valores de tipo entero (`int`)
-se declara de la siguiente forma:
+Los arrays asociativos de D están incluidos en el propio lenguaje. Estos arrays
+asociativos también son conocidos como *hash maps*. Un array asociativo con una
+clave de tipo cadena de caracteres (`string`) y con valores de tipo entero
+(`int`) se declara de la siguiente forma:
 
     int[string] arr;
 
