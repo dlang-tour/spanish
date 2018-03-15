@@ -12,38 +12,42 @@ lenguaje que compila directamente a código de máquina __nativo__ y __eficient
 ### ¿Qué es D?
 
 D es la culminación de décadas de experiencia implementando __compiladores__
-para muchos diversos lenguajes, y tiene un lárgo número de 
+para muchos y diversos lenguajes teniendo este un largo número de 
 [características únicas](http://dlang.org/overview.html):
 
 {{#dmandesktop}}
 
-- constructores de _alto nivel_ para un gran poder de modelado
-- lenguaje compilado de _alto rendimiento_
+- constructores de _alto nivel_ para una gran potencia de modelado
+- lenguaje compilado de alto rendimiento
 - tipos estáticos
-- evolución de C++ (sin errores)
-- interfaz directa con la API del sistema operativo y el hardware
-- tiempos de compilación extraordinarios
-- permite el manejo seguro de memoria (SafeD)
-- código _mantenible_ y _legible_
-- curva de aprendizaje corta (sintaxis C, similar a Java y otros)
+- interfaz directa con las API del sistema operativo y del hardware
+- tiempos de compilación asombrosamente rápidos
+- manejo seguro de memoria (SafeD)
+- código mantenible y fácilmente legible
+- curva de aprendizaje gradual (misma sintaxis que C, Java y otros)
 - compatible con la interfaz binaria de aplicaciones de C
-- multi-paradigma (imperativo, estructurado, orientado a objetos, genérico, pureza de programación funcional, e incluso de ensamblador)
-- prevención de errores incorporada (contratos, unittests)
+- compatible parcialmente con la interfaz binaria de aplicaciones de C++
+- multiparadigma: imperativo, estructurado, orientado a objetos, tipos genéricos, pureza en la programación funcional e, incluso, ensamblador
+- prevención nativa de errores (contratos, unittests)
 
-... y muchas más [características](http://dlang.org/overview.html).
+...y muchas más [características](http://dlang.org/overview.html).
 
 {{/dmandesktop}}
 
-### Acerca del tour
+### Acerca de este tour
 
 Cada sección contiene un código fuente ejemplo que puede ser modificado y usado 
-para experimentar con las propiedades del lenguaje D.
-Haga clic en el botón run (o `Ctrl-enter`) para compilar y ejecutar.
+para experimentar con las características del lenguaje de programación D.
+Haz clic en el botón *run* (o presiona `Ctrl-Enter`) para compilar y ejecutar.
 
-### Contribuyendo
+Para navegar por este tour usa los enlaces “< Anterior” y “Siguiente >” que hay
+al final de esta página (o usa las flechas izquierda y derecha del teclado).
+O, si quieres ir a una sección en concreto, puedes usar el menú superior.
 
-Este tour es [código abierto](https://github.com/dlang-tour) 
-y estamos alegres de aportar solicitudes para mejorarlo.
+### Cómo contribuir
+
+Este tour es [código abierto](https://github.com/dlang-tour) y agradecemos
+las aportaciones con las que colaboren para hacer este tour aún mejor.
 
 ## {SourceCode}
 
@@ -51,8 +55,7 @@ y estamos alegres de aportar solicitudes para mejorarlo.
 import std.stdio;
 
 // ¡Empecemos!
-void main()
-{
-    writeln("¡Hola mundo!");
+void main() {
+    writeln("¡Hola, mundo!");
 }
 ```
