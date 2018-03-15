@@ -9,11 +9,11 @@ ordering:
 - structs
 - arrays
 - slices
-# - alias-strings
-# - loops
-# - foreach
-# - ranges
-# - associative-arrays
+- alias-strings
+- loops
+- foreach
+- ranges
+- associative-arrays
 # - classes
 # - interfaces
 # - templates
