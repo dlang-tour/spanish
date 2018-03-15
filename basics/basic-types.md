@@ -1,11 +1,11 @@
 # Tipos básicos
 
-D provee varios tipos básicos que siempre tienen el mismo
+D proporciona varios tipos de datos básicos que siempre tienen el mismo
 tamaño **independientemente** de la plataforma, siendo el
-tipo `real` la única excepción, proveyendo la mayor precisión
+tipo `real` la única excepción, proporcionando la mayor precisión
 de punto flotante disponible. No hay diferencias en el tamaño
 de un entero independientemente de si la aplicación es
-compilada para sistemas de 32 ó 64 bits.
+compilada para sistemas de 32 o 64 bits.
 
 | tipo                          | tamaño
 |-------------------------------|------------
@@ -15,7 +15,7 @@ compilada para sistemas de 32 ó 64 bits.
 |`int`, `uint`, `dchar`         | 32 bits
 |`long`, `ulong`                | 64 bits
 
-#### Tipos de punto flotante:
+#### Tipos de coma flotante
 
 | tipo    | tamaño
 |---------|--------------------------------------------------
@@ -23,100 +23,97 @@ compilada para sistemas de 32 ó 64 bits.
 |`double` | 64 bits
 |`real`   | >= 64 bits (generalmente 64 bits, pero 80 bits en Intel x86 de 32 bits)
 
-El prefijo `u` denota tipos *sin signo*. `char` especifica
-caracteres UTF-8, `wchar` es usado en cadenas UTF-16, y `dchar`
-en cadenas UTF-32.
+El prefijo `u` denota tipos numéricos **sin signo**. `char` especifica
+caracteres UTF-8, `wchar` se usa para cadenas UTF-16 y `dchar`
+se usa para cadenas UTF-32.
 
-Las conversiones entre variables de tipos distintos solo son
+Las conversiones entre variables de tipos distintos sólo son
 permitidas por el compilador si no se pierde precisión. Sin
-embargo, las conversiones entre tipos de punto flotante (ej.
+embargo, las conversiones entre tipos de coma flotante (por ejemplo, de
 `double` a `float`) sí están permitidas.
 
 La palabra clave especial `auto` crea una variable e infiere
 su tipo a partir del lado derecho de la expresión. `auto miVar = 7`
-deducirá el tipo `int` para `miVar`. Note que aún con `auto` el
-tipo es definido durante la compilación y no podrá ser cambiado
-posteriormente durante la ejecución, al igual que con cualquier
-otra variable con un tipo asignado explícitamente.
+deducirá el tipo `int` para `miVar`. Aunque se use `auto` en la declaración
+de variables, su tipo se define durante la compilación y no puede ser cambiado
+durante la ejecución, al igual que con cualquier otra variable declarada
+con un tipo asignado explícitamente.
 
 ### Propiedades de los tipos
 
 Todos los tipos de datos tienen una propiedad `.init` usada para la
-inicialización de variables. Para todos los enteros, es `0`
-y para variables de punto flotante es `nan` (*no es un número*).
+inicialización de variables. Para todos los enteros, esta vale `0`
+y para variables de coma flotante esta vale `nan` (no es un número,
+*not a number* en inglés).
 
-Los tipos enteros y de punto flotante tienen una propiedad `.max`
-para el máximo valor que pueden representar. Los tipos enteros también
-tienen una propiedad `.min` para el valor más pequeño que pueden
-representar, mientras que los tipos de punto flotante tienen una
-propiedad `.min_normal` que es definida como el mínimo valor
-normalizado representable que no sea 0.
+Los tipos enteros y de coma flotante tienen la propiedad `.max` que es
+el máximo valor que pueden representar. Los tipos enteros también
+tienen la propiedad `.min` para el valor más pequeño que pueden
+representar, mientras que los tipos de coma flotante tienen la
+propiedad `.min_normal` que se define como el mínimo valor normalizado
+representable que no es 0.
 
-los tipos de punto flotante también tienen las propiedades `.nan`
+Los tipos de coma flotante también tienen, entre otras, las propiedades `.nan`
 (el valor NaN), `.infinity` (el valor infinito), `.dig` (el
-número de dígitos decimales de precisión), `.mant_dig`
-(número de bits en la mantisa) y otras más.
+número de dígitos decimales de precisión) y `.mant_dig`
+(número de bits en la mantisa).
 
-Todos los tipos también tienen una propiedad `.stringof`
-que retorna su nombre como una cadena (de caracteres).
+Todos los tipos de datos tienen también la propiedad `.stringof` que
+devuelve el nombre del tipo de dato como una cadena de caracteres (`string`).
 
 ### Índices en D
 
-Los índices en D normalmente usan el alias de tipo `size_t`,
-pues es un tipo lo suficientemente grande para representar
-un offset/desplazamiento hacia toda la memoria direccionable, el cual es
-`uint` en arquitecturas de 32 bits y `ulong` en 64 bits.
+Los índices en D usan generalmente el tipo de dato `size_t` ya que es un tipo
+lo suficientemente grande como para representar un desplazamiento (*offset*)
+que cubra toda la memoria direccionable. Este tipo de dato es `uint` en
+arquitecturas de 32 bits y `ulong` en arquitecturas de 64 bits.
 
-### Expresión assert
+### Expresión `assert`
 
-`assert` es una expresión que verifica condiciones en modo
-de depuración y aborta con un `AssertionError` si es que
-falla. `assert(0)` por lo tanto se usa para demarcar
-código al que no se puede llegar.
+`assert` es una expresión que verifica condiciones en modo de depuración y,
+en caso de no cumplirse la condición, esta aborta la ejecución del programa con
+un `AssertionError`. `assert(0)` se usa para indicar código inalcanzable.
 
-### Profundizar más
-
-Nota: las siguientes referencias están en inglés
+### En profuncidad
 
 #### Referencias básicas
 
-- [Asignación](http://ddili.org/ders/d.en/assignment.html)
+- [Assignment](http://ddili.org/ders/d.en/assignment.html)
 - [Variables](http://ddili.org/ders/d.en/variables.html)
-- [Aritmética](http://ddili.org/ders/d.en/arithmetic.html)
-- [Punto Flotante](http://ddili.org/ders/d.en/floating_point.html)
-- [Tipos fundamentales en _Programando en D_](http://ddili.org/ders/d.en/types.html)
+- [Arithmetics](http://ddili.org/ders/d.en/arithmetic.html)
+- [Floating Point](http://ddili.org/ders/d.en/floating_point.html)
+- [Fundamental types in _Programming in D_](http://ddili.org/ders/d.en/types.html)
 
 #### Referencias avanzadas
 
-- [Listado de todos los tipos básicos en D](https://dlang.org/spec/type.html)
-- [`auto` y `typeof` en _Programando en D_](http://ddili.org/ders/d.en/auto_and_typeof.html)
-- [Propiedades de tipos](https://dlang.org/spec/property.html)
-- [Expresión assert](https://dlang.org/spec/expression.html#AssertExpression)
+- [Overview of all basic data types in D](https://dlang.org/spec/type.html)
+- [`auto` and `typeof` in _Programming in D_](http://ddili.org/ders/d.en/auto_and_typeof.html)
+- [Type properties](https://dlang.org/spec/property.html)
+- [Assert expression](https://dlang.org/spec/expression.html#AssertExpression)
 
 ## {SourceCode}
 
 ```d
 import std.stdio : writeln;
 
-void main()
-{
-    // Los números grandes pueden ser separados
+void main() {
+    // Los números grandes se puede separar
     // con un guión bajo "_"
-    // para mejor legibilidad.
+    // para mejorar la legibilidad.
     int b = 7_000_000;
     short c = cast(short) b; // cast necesario
-    uint d = b; // está bien
+    uint d = b; // bien
     int g;
     assert(g == 0);
 
     auto f = 3.1415f; // f indica que es float
 
-    // typeid(VAR) retorna información del tipo
+    // typeid(VAR) devuelve información del tipo
     // de una expresión.
     writeln("el tipo de f es ", typeid(f));
-    double pi = f; // está bien
-    // para tipos de punto flotante
-    // se permite conversiones implícitas
+    double pi = f; // bien
+    // para tipos de coma flotante
+    // se permiten conversiones implícitas
     // a tipos de menor precisión
     float demoted = pi;
 
