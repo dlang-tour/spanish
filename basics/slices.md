@@ -70,13 +70,14 @@ void main()
     test.writeln;
     writeln("Primer elemento: ", test[0]);
     writeln("Último elemento: ", test[$ - 1]);
-    writeln("Se excluyen los dos primeros elementos: ",
-        test[2 .. $]);
+    writeln("Se excluyen los dos primeros " ~
+        "elementos: ", test[2 .. $]);
 
-    writeln("Los slices son vistas de la memoria:");
+    writeln("Los slices son vistas de " ~
+        "la memoria:");
     auto test2 = test;
     auto subView = test[3 .. $];
-    test[] += 1; // se incrementa cada elemento en 1
+    test[] += 1; // +1 a cada elemento
     test.writeln;
     test2.writeln;
     subView.writeln;
