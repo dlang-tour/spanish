@@ -70,7 +70,7 @@ import std.stdio : writeln;
 Clase que usa plantillas para permitir
 la implementación genérica de animales.
 
-Parámetros:
+Params:
     noise = cadena a escribir
 */
 class Animal(string noise) {
@@ -90,7 +90,7 @@ Función que usa plantillas y que toma como
 parámetro cualquier tipo T e implementa la
 función `makeNoise`.
 
-Parémtros:
+Params:
     animal = objeto que hace ruido
     n = número de veces a llamar a makeNoise
 */

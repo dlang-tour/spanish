@@ -47,7 +47,7 @@ la clase base.
 
 ### Comprobación de identidad
 
-Para las instancias de las clases, los oepradores `==` y `!=` comparan los
+Para las instancias de las clases, los operadores `==` y `!=` comparan los
 contenidos de dichas instancias, por lo que comparar contra el valor `null`
 no es válido, ya que `null` no tiene ningún contenido. Es el operador `is`
 el que compara identidades (si dos instancias son la misma o si una instancia

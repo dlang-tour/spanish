@@ -25,7 +25,7 @@ N.d.T.: Todos estos recursos están en inglés.
 * Bucea en el código fuente del [compilador de D, dmd](https://github.com/dlang/dmd), [Phobos, la librería estándar](https://github.com/dlang/phobos), y el [*runtime*](https://github.com/dlang/druntime).
 * Sigue el [estilo de programación de D](http://dlang.org/dstyle.html)
 * Mira cómo funciona D en [Rosetta code](http://rosettacode.org/wiki/Category:D).
-* Explora [awesome-d](https://github.com/zhaopuming/awesome-d/blob/master/README.md), una lista de recursos sobre D (*framworks*, bibliotecas y otro software).
+* Explora [awesome-d](https://github.com/zhaopuming/awesome-d/blob/master/README.md), una lista de recursos sobre D (*frameworks*, bibliotecas y otro software).
 * Inspírate con los [modismos (*idioms* en inglés) del lenguaje de programación D](https://p0nce.github.io/d-idioms/).
 
 ### Ayuda

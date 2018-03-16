@@ -62,7 +62,7 @@ interface Animal {
 
     /*
     Patrón NVI. Usa makeNoise internamente
-    parapersonalizar el comportamiento al
+    para personalizar el comportamiento al
     heredar de otras clases.
 
     Parámetros:
