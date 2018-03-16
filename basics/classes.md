@@ -148,7 +148,8 @@ void main()
     ];
 
     foreach (any; anys) {
-        writeln("Tipo de 'any' = ", any.getType());
+        writeln("Tipo de 'any' = ",
+            any.getType());
         writeln("Contenido = ",
             any.convertToString());
     }
