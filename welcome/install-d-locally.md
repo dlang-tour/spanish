@@ -37,7 +37,7 @@ Además, hay __plugins__ para desarrollar D al menos para los siguientes editore
 - [VS Code](https://marketplace.visualstudio.com/items/webfreak.code-d)
 - [__Visual Studio__](http://rainers.github.io/visuald/visuald/StartPage.html)
 
-Además, puedes querer probar un IDE deciado específicamente a D:
+Además, puedes querer probar un IDE dedicado específicamente a D:
 
 - [Coedit](https://github.com/BBasile/Coedit)
 - [Dlang IDE](https://github.com/buggins/dlangide)

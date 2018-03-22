@@ -12,21 +12,21 @@ Una función también puede ser un parámetro de otra función.
     doSomething(&add); // se usa la función global `add` y esta
                        // debe tener dos enteros como parámetros
 
-`doer` puede ser llamadao como cualquier otra función.
+Se puede llamar a la función `doer` como a cualquier otra función.
 
 ### Funciones locales con contexto
 
-El ejemplo anterior usa el tipo de dato `function` que no es más que un
-puntero a una función flobal. En el momento en que una función miembro o una
-función local es referenciada, un delegado (`delegate`) ha de ser usado.
+El ejemplo anterior usa el tipo de dato `function`, que no es más que un
+puntero a una función local. Se debe usar un delegado (`delegate`) en el
+momento en que una función miembro o una función local se referencia.
 Un `delegate` es un puntero a una función que contiene información adicional
 sobre su contexto o su *enclosure* en inglés, de ahí que también se les llame
 en otros lenguajes, en inglés, ***closures***. Por ejemplo, un `delegate` que
 apunte a un método de una clase incluye tanto el puntero a la función como
 el puntero al objeto de la clase. Un `delegate` creado por una función anidada
 incluye un enlace al contexto de la función padre en lugar de a una clase.
-Sin embargo, el compilador de D puede automáticamente hacer una copia de dicho
-contexto en el *heap* si es necesario para garantizar la seguridad de la
+Sin embargo, en caso necesario el compilador de D puede hacer automáticamente
+una copia de dicho contexto en el *heap* para garantizar la seguridad de la
 memoria. Entonces el `delegate` llevará un enlace a dicha zona de memoria.
 
     void foo() {
@@ -62,7 +62,7 @@ modo de definir un *folding* (también conocido como reductor o *reducer* en ing
 
     [1, 2, 3].reduce!`a + b`; // 6
 
-Las funciones de tipo cadena de caracteres sólo son posibles con *uno o dos*
+Las funciones de tipo cadena de caracteres sólo son posibles con **uno o dos**
 parámetros, usando `a` como primer argumento y `b` como segundo.
 
 ### En profundidad
@@ -87,8 +87,7 @@ Parámetros:
     op = operación matemática seleccionada
 Devuelve: `delegate` que hace la operación
 */
-auto getMathOperation(IntOps op)
-{
+auto getMathOperation(IntOps op) {
     // Se definen 4 funciones lambda para
     // 4 operaciones matemáticas diferentes
     auto add = (int lhs, int rhs) => lhs + rhs;
@@ -111,8 +110,7 @@ auto getMathOperation(IntOps op)
     }
 }
 
-void main()
-{
+void main() {
     int a = 10;
     int b = 5;
 

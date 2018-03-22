@@ -8,7 +8,7 @@ foreach (element; range) {
 }
 ```
 
-internamente es reescrito de forma similar a lo siguiente:
+este es reescrito internamente de forma similar a lo siguiente:
 
 ```
 for (auto __rangeCopy = range;
@@ -24,25 +24,24 @@ Se llama **rango** (*range* en inglés) a cualquier objeto que cumpla con la
 siguiente interfaz:
 
 ```
-    interface InputRange(E)
-    {
+    interface InputRange(E) {
         bool empty();
         E front();
         void popFront();
     }
 ```
 
-Más concretamente, esta interfaz es un `InputRange` y es gracias a ella por
+Más concretamente esta interfaz es un `InputRange` y es gracias a ella por
 la que los elementos de los objetos de este tipo pueden ser iterados.
 
-Puede echar un vistazo al ejemplo de la derecha para ver la implementación y el
+En el ejemplo de la derecha se puede ver la implementación y el
 uso de un rango de este tipo (*input range*).
 
-## Vagueza (*laziness*)
+## Pereza (*laziness*)
 
-Los rangos son **vagos** (*lazy* en inglés), lo que significa que estos no
-serán evaluados hasta que no sea requerido. De ahí que se pueda coger un
-número finito de elementos de un rango infinito:
+Los rangos son ***perezosos*** (*lazy* en inglés), lo que significa que estos no
+son evaluados hasta que no es requerido. Es por esto por lo que se puede coger
+un número finito de elementos de un rango infinito:
 
 ```d
 42.repeat.take(3).writeln; // [42, 42, 42]
@@ -73,15 +72,14 @@ r2.writeln; // []
 
 ### Los `InputRanges` que se pueden copiar son `ForwardRanges`
 
-Muchos de los rangos usados en la librería estándar son estructuras (`struct`)
+Muchos de los rangos usados en la librería estándar son estructuras (`struct`),
 por lo que los bucles `foreach` son generalmente no destructivos, aunque esto
 no se garantiza. Si esta garantía es importante, se puede usar una
 especialización de los `InputRange`: rangos con el método `.save`, también
 conocidos como `ForwardRange`:
 
 ```
-interface ForwardRange(E) : InputRange!E
-{
+interface ForwardRange(E) : InputRange!E {
     typeof(this) save();
 }
 ```
@@ -102,8 +100,7 @@ rango con acceso aleatorio a sus elementos.
 Un rango bidireccional permite la iteración desde el final:
 
 ```d
-interface BidirectionalRange(E) : ForwardRange!E
-{
+interface BidirectionalRange(E) : ForwardRange!E {
      E back();
      void popBack();
 }
@@ -114,11 +111,10 @@ interface BidirectionalRange(E) : ForwardRange!E
 ```
 
 Un rango con acceso aleatorio a elementos tiene una longitud conocida,
-`length`, y cada elemento puede ser accedido directamente:
+`length`, y se puede acceder a cada elemento de forma directa:
 
 ```d
-interface RandomAccessRange(E) : ForwardRange!E
-{
+interface RandomAccessRange(E) : ForwardRange!E {
      E opIndex(size_t i);
      size_t length();
 }
@@ -131,17 +127,17 @@ auto r = [4, 5, 6];
 r[1].writeln; // 5
 ```
 
-### Algoritmos con acceso vago (*lazy*) a rangos
+### Algoritmos con acceso *perezoso* (*lazy*) a rangos
 
 Las funciones en [`std.range`](http://dlang.org/phobos/std_range.html) y
 [`std.algorithm`](http://dlang.org/phobos/std_algorithm.html) proporcionan
 bloques de construcción que hacen uso de esta interfaz de rangos. Los rangos
 permiten componer complejos algoritmos detrás de objetos sobre los que se
-itera con facilidad. Además, los rangos permite crear objetos ***vagos***
-(*lazy* en inglés) que sólo realizan cálculos cuando se necesitan realmente
+itera con facilidad. Además, los rangos permiten crear objetos ***perezosos***
+(*lazy* en inglés) que sólo realizan cálculos cuando realmente se necesitan
 en la iteración, es decir, cuando se accede al siguiente elemento del rango.
 Algoritmos especiales sobre rangos se verán en la sección
-[gemas de D](gems/range-algorithms)
+[joyas de D](gems/range-algorithms).
 
 ### En profundidad
 
