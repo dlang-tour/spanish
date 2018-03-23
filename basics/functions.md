@@ -1,9 +1,9 @@
 # Funciones
 
-Una función en D ya ha sido presentada: `main()`. Esta función es el punto de
-entrada de todo programa escrito en D. Una función puede devolver un valor (o
-puede ser declaraca como `void` y no devolver nada) y aceptar un número arbitrario
-de argumentos:
+Existe una función en D que ya ha sido presentada: `main()`. Esta función es
+el punto de entrada de todo programa escrito en D. Una función puede devolver
+un valor (o puede ser declaraca como `void` y no devolver nada) y aceptar un
+número arbitrario de argumentos:
 
     int add(int lhs, int rhs) {
         return lhs + rhs;
@@ -29,7 +29,7 @@ datos compatibles.
 
 ### Argumentos predeterminados
 
-Las funciones puede definir de forma opcional argumentos con valores
+Las funciones pueden definir de forma opcional argumentos con valores
 predeterminados. Esto evita la tediosa tarea de declarar funciones
 sobrecargadas redundantes.
 
@@ -71,8 +71,7 @@ mayor detalle [en breve](basics/delegates).
 import std.stdio : writeln;
 import std.random : uniform;
 
-void randomCalculator()
-{
+void randomCalculator() {
     // Se definen 4 funciones locales para
     // 4 operaciones matemáticas
     auto add(int lhs, int rhs) {
@@ -115,8 +114,7 @@ void randomCalculator()
     }
 }
 
-void main()
-{
+void main() {
     randomCalculator();
     // add(), sub(), mul() y div()
     // no son visibles fuera de su ámbito

@@ -1,9 +1,9 @@
 # Clases
 
-D tiene clases e interfaces de la misma forma que Java o C++. 
+D tiene clases e interfaces de la misma forma que las tienen Java y C++.
 
-Cualquier clase (declarada con `class`) hereda de forma implícita de la clase
-base [`Object`](https://dlang.org/phobos/object.html).
+Cualquier clase (declarada con la palabra reservada `class`) hereda de forma
+implícita de la clase base [`Object`](https://dlang.org/phobos/object.html).
 
     class Foo { } // hereda de Object
     class Bar : Foo { } // Bar también es Foo
@@ -39,7 +39,7 @@ En D, las clases sólo pueden heredar de una sola clase.
 - Una función se puede marcar en la clase base con la palabra reservada `final`
 para impedir que sea sobreescrita.
 - Una función se puede declarar usando la palabra reservada `abstract` para
-forzar a las clases derivadas que tienen que sobreescribirla.
+forzar a las clases derivadas a que tengan que sobreescribirla.
 - Una clase completa se puede declarar usando la palabra reservada `abstract`
 para asegurarse de que nunca pueda ser instanciada.
 - `super(...)` se puede usar para llamar de forma explícita al constructor de
@@ -61,8 +61,8 @@ if (c is null)  // ok
     ...
 ```
 
-En las estructuras (*struct*s) los objetos se comparan bit a bit. Para otros
-operadores, la identidad es lo mismo que la igualdad.
+En las estructuras (`struct`s) los objetos se comparan bit a bit. Para otros
+operadores la identidad es lo mismo que la igualdad.
 
 ### En profundidad
 
@@ -140,8 +140,7 @@ class Float : Any {
     }
 }
 
-void main()
-{
+void main() {
     Any[] anys = [
         new Integer(10),
         new Float(3.1415f)

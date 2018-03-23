@@ -32,7 +32,7 @@ permitidas por el compilador si no se pierde precisión. Sin
 embargo, las conversiones entre tipos de coma flotante (por ejemplo, de
 `double` a `float`) sí están permitidas.
 
-La palabra clave especial `auto` crea una variable e infiere
+La palabra reservada `auto` crea una variable e infiere
 su tipo a partir del lado derecho de la expresión. `auto miVar = 7`
 deducirá el tipo `int` para `miVar`. Aunque se use `auto` en la declaración
 de variables, su tipo se define durante la compilación y no puede ser cambiado
@@ -63,10 +63,10 @@ devuelve el nombre del tipo de dato como una cadena de caracteres (`string`).
 
 ### Índices en D
 
-Los índices en D usan generalmente el tipo de dato `size_t` ya que es un tipo
-lo suficientemente grande como para representar un desplazamiento (*offset*)
-que cubra toda la memoria direccionable. Este tipo de dato es `uint` en
-arquitecturas de 32 bits y `ulong` en arquitecturas de 64 bits.
+Los índices en D usan generalmente el tipo de dato `size_t`, ya que es un tipo
+de dato lo suficientemente grande como para representar un desplazamiento
+(*offset*) que cubra toda la memoria direccionable. Este tipo de dato es `uint`
+en arquitecturas de 32 bits y `ulong` en arquitecturas de 64 bits.
 
 ### Expresión `assert`
 

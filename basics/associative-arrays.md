@@ -18,9 +18,9 @@ expresión `in`:
         writeln("Sí");
 
 La expresión `in` devuelve un puntero al valor referenciado por la clave
-indicada o `null` en el caso de que no exista la clave dada. Gracias a esto,
-la comprobación de existencia claves y la asignación pueden ser convenientemente
-combinadas:
+indicada, o `null` en caso de que no exista la clave dada. Gracias a esto,
+la comprobación de existencia de claves y la asignación se pueden combinar
+según convenga:
 
     if (auto val = "key1" in arr)
         *val = 20;
@@ -30,8 +30,8 @@ error de tipo `RangeError` que aborta inmediatamente la aplicación. Se puede
 usar la función `get(key, defaultValue)` para acceder de forma segura a los
 arrays asociativos dando un valor predeterminado.
 
-Los arrays asociativos (conocidos con la abreviatura AA) tiene la propiedad
-`.length` como los arrays normales. Además también tienen el método
+Los arrays asociativos (conocidos con la abreviatura AA) tienen la propiedad
+`.length` igual que los arrays normales. Además también tienen el método
 `.remove(val)` para borrar elementos dada su clave. Se deja como ejercicio
 para el lector explorar los rangos especiales `.byKey` y `.byValue`.
 

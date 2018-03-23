@@ -13,8 +13,8 @@ condición sea satisfecha:
 
 ### 2) Bucle `do ... while`
 
-Los bucles `do .. while` ejecutan el bloque de código inficado mientras cierta
-condición sea satisfecha, pero en contraste con los bucles `while`, el bloque
+Los bucles `do .. while` ejecutan el bloque de código indicado mientras cierta
+condición sea satisfecha, pero al contrario que los bucles `while`, el bloque
 de código se ejecuta **antes** de que la condición se evalúe por primera vez:
 
     do {
@@ -23,8 +23,8 @@ de código se ejecuta **antes** de que la condición se evalúe por primera vez:
 
 ### 3) Bucle `for`
 
-El clásico bucle `for`, conocido por C/C++ o Java, cuenta las famosas tres
-partes: el inicializador, la condición y la sentencia que de control de pasos:
+El clásico bucle `for`, conocido por C/C++ o Java, cuenta con las famosas tres
+partes: el inicializador, la condición y la sentencia de control de pasos:
 
     for (int i = 0; i < arr.length; i++) {
         foo();
@@ -32,17 +32,17 @@ partes: el inicializador, la condición y la sentencia que de control de pasos:
 
 ### 4) Bucle `foreach`
 
-El [bucle `foreach`](basics/foreach), que será mostrado con más detalle en la
+El [bucle `foreach`](basics/foreach), que se verá con más detalle en la
 sección siguiente:
 
     foreach (elem; arr) {
         foo();
     }
 
-#### Palabras clave (*keywords*) especiales y etiquetas
+#### Palabras reservadas (*keywords*) y etiquetas
 
-La palabra clave especial `break` aborta inmediatamente el bucle actual. En
-un bucle anidaddo, se puede indicar una **etiqueta** para saber a qué parte del
+La palabra reservada `break` aborta inmediatamente el bucle actual. En
+un bucle anidaddo se puede indicar una **etiqueta** para saber a qué parte del
 bucle exterior hay que ir cuando se rompe el bucle interior:
 
     outer: for (int i = 0; i < 10; ++i) {
@@ -52,7 +52,7 @@ bucle exterior hay que ir cuando se rompe el bucle interior:
         }
     }
 
-La palabra clave `continue` inicia inmediatamente la siguiente iteración
+La palabra reservada `continue` inicia inmediatamente la siguiente iteración
 del bucle.
 
 ### En profundidad

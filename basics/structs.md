@@ -1,7 +1,7 @@
 # Estructuras (*structs*)
 
 Una forma de definir un tipos de datos compuestos o personalizados en D es
-definirlos a través de una `struct` (estructura).
+definirlos a través de una estructura mediante la palabra reservada `struct`.
 
     struct Person {
         int age;
@@ -36,8 +36,8 @@ actual de la estructura puede ser accedida mediante `this`.
 Una `struct` puede contener cualquier número de funciones miembro. Estos
 métodos son públicos (`public`) de forma predeterminada y accesibles desde
 cualquier sitio. Estos métodos podrían declararse como privados (`private`)
-y sólo podrían ser accedidos por otro método de la `struct` o por otro código
-en el mismo módulo.
+y sólo podría acceder a ellos otro método de la `struct` o código dentro
+del mismo módulo.
 
     struct Person {
         void doStuff() {
@@ -58,18 +58,18 @@ dicha función nunca cambiarán el estado del objeto.
 
 ### Funciones miembro estáticas
 
-Si una función miembro es declarada como `static`, esta podrá ser llamada sin
+Si una función miembro se declara como `static`, esta se podrá llamar sin
 la necesidad de instanciar ningún objeto (por ejemplo: `Person.myStatic()`),
 pero no está permitido acceder a miembros que no estén marcados como `static`.
 Esto se puede usar cuando un método no necesita acceder a ningún miembro del
-objeto pero que, evidentemente, pertenece a la misma clase. Además, esto puede
-ser usado para proporcionar funcionalidad sin la necesidad de crear una
-isntancia. Por ejemplo, algunos patrones *Singleton* utilizan `static` para su
+objeto pero que, evidentemente, pertenece a la misma clase. Además, esto se
+puede usar para proporcionar funcionalidad sin tener que crear una instancia.
+Por ejemplo, algunos patrones *Singleton* utilizan `static` para su
 implementación.
 
 ### Herencia
 
-Hay que tener en cuenta que una `struct` no puede heredar de otras `struct`s.
+Hay que tener en cuenta que una estructura no puede heredar de otras estructuras.
 Las herencias entre tipos sólo se pueden construir usando clases, que se verán
 en una sección futura. Sin embargo, mediante las sentencia `alias this` y/o
 `mixins` fácilmente se puede conseguir herencia polimórfica.

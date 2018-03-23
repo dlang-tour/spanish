@@ -2,17 +2,17 @@
 
 Ahora que sabemos lo que son los arrays, que hemos entrado en contacto con
 `immutable` y que hemos echado un vistazo rápido a los tipos de datos básicos,
-es momento de presentar dos nuevas construcciones en una línea:
+es momento de presentar dos nuevas construcciones en una sola línea:
 
     alias string = immutable(char)[];
 
-El término `string` es definido mediante una sentencia `alias` donde se define
-como un *slice* de caracteres inmutables (`inmmutable(char)`). Esto significa
-que una vez que un `string` ha sido construido, su contenido nunca cambiará.
+El término `string` se define mediante una sentencia `alias` que lo declara
+como un *slice* de caracteres inmutables (`immutable(char)`). Esto significa
+que una vez que un `string` ha sido construido, su contenido nunca cambia.
 Y esta es la segunda introducción: ¡bienvenidas, `string`s en UTF-8!
 
 Debido a su inmutabilidad, las `string`s se puede compartir perfectamente entre
-varios hilos de ejecución. Como un `string` es un *slice*, se puede coger
+varios hilos de ejecución. Como un `string` es un *slice*, se pueden coger
 ciertas partes de la misma sin necesidad de reservar memoria. La función
 [`std.algorithm.splitter`](https://dlang.org/phobos/std_algorithm_iteration.html#.splitter)
 de la librería estándar, por ejemplo, parte una cadena por cada retorno de
@@ -66,7 +66,7 @@ dos puntos de código (*code points*) en total. Finalmente, la función
 `byGrapheme` realiza costosos cálculos para reconocer que esos dos puntos de
 código se combinan en único caracter a mostrar.
 
-El procesado correcto de cadenas Unicode puede ser bastante complicado, por eso
+El procesado correcto de cadenas Unicode puede ser bastante complejo, por eso
 la mayor parte del tiempo los desarrolladores que usen D pueden simplemente
 considerar las variables de tipo `string` como arrays de bytes mágicos y
 confiar en que los algoritmos de la librería estándar hagan su trabajo

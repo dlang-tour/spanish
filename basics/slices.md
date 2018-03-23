@@ -1,10 +1,10 @@
 # Slices
 
-Los *slices* son objetos de tipo `T[]` para cualquier tipo `T` que proveen
-una vista de un subconjunto de un archivo de valores de tipo `T` o
+Los *slices* son objetos de tipo `T[]` para cualquier tipo `T` que proporcionan
+una vista de un subconjunto de un archivo de valores de tipo `T`, o
 simplemente una vista del array completo.
 
-**Los *slices* y los arrays dinámicos son la misma cosa.**
+**Los _slices_ y los arrays dinámicos son la misma cosa.**
 
 Un *slice* está formado por dos miembros: un puntero al primer elemento y
 otro elemento con la longitud de dicho *slice*:
@@ -28,10 +28,10 @@ de basura (*garbage collector* en inglés). El *slice* devuelto actúa como una
 
 Al usar el operador para crear *slices* también se puede obtener otro *slice*
 que apunte a memoria que ya ha sido reservada. Este operador también se puede
-aplicar a otro *slice*, a arrays estáticos, a clases y estructuras que
-implementen el operador `opSlice` y a varias entidades más.
+aplicar a otro *slice*, a arrays estáticos, a clases y a estructuras que
+implementen el operador `opSlice`, y a varias entidades más.
 
-En la empresión de ejemplo `origin[start .. end]`, el operador de *slice* se usa
+En la expresión de ejemplo `origin[start .. end]`, el operador de *slice* se usa
 para obtener un *slice* de todos los elementos de `origin` desde `start` hasta
 el elemento **anterior** a `end`:
 
@@ -64,8 +64,7 @@ tipo `RangeError` (si la comprobación de límites no está desactivada).
 ```d
 import std.stdio : writeln;
 
-void main()
-{
+void main() {
     int[] test = [ 3, 9, 11, 7, 2, 76, 90, 6 ];
     test.writeln;
     writeln("Primer elemento: ", test[0]);

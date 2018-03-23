@@ -1,6 +1,6 @@
 # Memoria
 
-D es un lenguaje de programación de sistemas por lo que permite gestión de
+D es un lenguaje de programación de sistemas, por lo que permite gestión de
 memoria manual. Sin embargo, gestionar la memoria de forma manual es muy
 propenso a errores, por lo que D usa de forma predeterminada un recolector
 de basura (*garbage collector* o *GC* en inglés) para gestionar la memoria.
@@ -33,8 +33,9 @@ prohibida en el código marcado como `@safe`:
         int* c = p + 5; // error
     }
 
-El código marcado como `@trusted` es verificado manualmente y permite un puente
-entre el código marcado como `@safe` y el mundo de la programación de bajo nivel.
+El código marcado como `@trusted` tiene que ser verificado de forma manual y es
+el que permite un puente entre el código marcado como `@safe` y el mundo de la
+programación de bajo nivel.
 
 ### En profundidad
 

@@ -3,7 +3,7 @@
 D permite definir funciones como plantillas (*templates* en inglés) de forma
 similar a como lo hace C++ y Java. Esto es una forma de definir funciones
 ***genéricas*** u objetos que pueden funcionar con cualquier tipo de dato que
-compile el cuerpo de la función:
+compile en el cuerpo de la función:
 
     auto add(T)(T lhs, T rhs) {
         return lhs + rhs;

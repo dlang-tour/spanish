@@ -1,6 +1,6 @@
 # Control de flujo
 
-El flujo de una aplicación puede ser controlado de forma condicional con las
+El flujo de las aplicaciones se puede controlar de forma condicional con las
 sentencias `if` y `else`:
 
     if (a == 5) {
@@ -11,7 +11,7 @@ sentencias `if` y `else`:
         writeln("¡Ninguna condición satisfecha!");
     }
 
-Cuando un bloque `if` o un `else` sólo contiene una sentencia, se pueden
+Cuando un bloque `if` o un bloque `else` sólo contienen una sentencia, se pueden
 omitir las llaves de apertura y cierre.
 
 D proporciona los mismos operadores que C/C++ y Java para comprobar la igualdad
@@ -25,10 +25,10 @@ representar un *O* lógico (*OR* en inglés) y `&&` para representar un *Y*
 lógico (*AND* en inglés).
 
 D también define una sentencia `switch`..`case` que ejecuta un caso dependiendo
-del valor de *una* variable. `switch` funciona con todos los tipos de datos
-básicos y ¡con cadenas de caracteres! Incluso es posible definir rangos para
-tipos de datos enteros usando la sintaxis `case START: .. case END:`. Asegúrate
-de echar un vistazo al código fuente de ejemplo.
+del valor de determinada variable. `switch` funciona con todos los tipos de datos
+básicos, y además, con cadenas de caracteres. También es posible definir rangos para
+tipos de datos enteros usando la sintaxis `case START: .. case END:`. Para mayor
+información se puede ver el código fuente de ejemplo.
 
 ### En profundidad
 
@@ -49,8 +49,7 @@ de echar un vistazo al código fuente de ejemplo.
 ```d
 import std.stdio : writeln;
 
-void main()
-{
+void main() {
     if (1 == 1)
         writeln("¡Las mates en D funcionan!");
 

@@ -1,6 +1,6 @@
 # Otras lecturas
 
-Una vez finalizada la párte básica sobre D se puede seguir con partes más
+Una vez finalizada la parte básica sobre D se puede seguir con partes más
 avanzadas de este tour. Además, se pueden revisar los recursos siguientes:
 
 N.d.T.: Todos estos recursos están en inglés.
@@ -31,5 +31,5 @@ N.d.T.: Todos estos recursos están en inglés.
 ### Ayuda
 
 * Pregunta en el canal de IRC de [#d](irc://irc.freenode.net/d) en freenode ([interfaz web](https://kiwiirc.com/client/irc.freenode.net/d)).
-* Obtén ayuda en el foro [D.learn](http://forum.dlang.org/group/learn)
-* Abre una incidencia en el [gestor de incidencias de D](https://issues.dlang.org)
+* Obtén ayuda en el foro [D.learn](http://forum.dlang.org/group/learn).
+* Abre una incidencia en el [gestor de incidencias de D](https://issues.dlang.org).

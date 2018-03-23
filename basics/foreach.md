@@ -15,7 +15,8 @@ usando el bucle `foreach`:
     }
 
 El primer campo dentro de la definición del bucle `foreach` es el nombre de la
-variable usada en la iteración. Su tipo se induce automáticamente:
+variable usada en la iteración. Si no se indica su tipo, este se deduce
+automáticamente:
 
     foreach (e; arr) {
         // typeof(e) es int
@@ -23,8 +24,8 @@ variable usada en la iteración. Su tipo se induce automáticamente:
     }
 
 El segundo campo debe ser un array, aunque también puede ser un tipo de datos
-especial que sea iterable llamado **rango** (*range* en inglés), que será
-mostrado en la [siguiente sección](basics/ranges).
+especial que sea iterable llamado **rango** (*range* en inglés), que se
+verá en la [siguiente sección](basics/ranges).
 
 ### Acceso por referencia
 
