@@ -21,8 +21,8 @@ dependencias de un archivo y ejecuta directamente la aplicación resultante:
 
     rdmd hello.d
 
-En sistemas UNIX se puede usar el __shebang__ `#!/usr/bin/env rdmd` en la primera línea de un
-archivo de D para permitir que este se comporte como un __script__.
+En sistemas UNIX se puede usar el _shebang_ `#!/usr/bin/env rdmd` en la primera línea de un
+archivo de D para permitir que este se comporte como un _script_.
 
 Se pueden ver las opciones que acepta `rdmd` en la [documentación en línea](https://dlang.org/rdmd.html)
 o ejecutando `rdmd --help` desde la línea de comandos.
@@ -36,11 +36,9 @@ siguiente línea de comandos:
     dub init hello
 
 Ejecutar `dub` dentro de este directorio descargará todas las dependencias, compilará la
-aplicación y la ejecutará.
-`dub build` compilará el proyecto.
+aplicación y la ejecutará. `dub build` compilará el proyecto.
 
-Más información sobre `dub`en la [documentación en línea](https://code.dlang.org/docs/commandline)
+Se puede obtener más información sobre `dub`en la [documentación en línea](https://code.dlang.org/docs/commandline)
 o ejecutando `dub help` en la línea de comandos.
 
 Todos los paquetes disponibles usando `dub` se pueden ver a través de [su interfaz web](https://code.dlang.org).
-
