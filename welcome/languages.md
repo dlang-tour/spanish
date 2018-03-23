@@ -1,9 +1,9 @@
-# Léelo en tu propio lenguaje
+# Léelo en tu propio idioma
 
-Este tour del lenguaje de programación D está disponible en múltiples lenguajes:
+Este tour del lenguaje de programación D está disponible en múltiples idiomas:
 
-- [Portugués brasileño - Português Brasileiro](https://tour.dlang.org/tour/pt/welcome/welcome-to-d) (partially, WIP)
 - [Inglés - English](https://tour.dlang.org/)
+- [Portugués brasileño - Português Brasileiro](https://tour.dlang.org/tour/pt/welcome/welcome-to-d) (partially, WIP)
 - [Francés - Français](https://tour.dlang.org/tour/fr/welcome/welcome-to-d)
 - [Alemán - Deutsch](https://tour.dlang.org/tour/de/welcome/welcome-to-d) (partially, WIP)
 - [Italiano - Italiano](https://tour.dlang.org/tour/it/welcome/welcome-to-d) (partially, WIP)
@@ -16,7 +16,7 @@ Este tour del lenguaje de programación D está disponible en múltiples lenguaj
 
 Para español, simplemente haz clic en la fecha que pone “Siguiente” o presiona la flecha derecha de tu teclado.
 
-## ¿No está listado tu idioma?
+## ¿No está tu idioma?
 
 Puedes encontrar las [traducciones en progreso aquí](https://github.com/dlang-tour),
 o enviarnos un mensaje mediante [GitHub](https://github.com/dlang-tour/core/issues/new)
