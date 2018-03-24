@@ -137,7 +137,7 @@ itera con facilidad. Además, los rangos permiten crear objetos ***perezosos***
 (*lazy* en inglés) que sólo realizan cálculos cuando realmente se necesitan
 en la iteración, es decir, cuando se accede al siguiente elemento del rango.
 Algoritmos especiales sobre rangos se verán en la sección
-[joyas de D](gems/range-algorithms).
+[perlas de D](gems/range-algorithms).
 
 ### En profundidad
 
