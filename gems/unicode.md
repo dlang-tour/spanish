@@ -1,80 +1,86 @@
-# Unicode in D
+# Unicode en D
 
-Unicode is a global standard for representing text in computers.
-D fully supports Unicode in both the language and the standard
-library.
+Unicode es un estándar global para representar texto en ordenadores. D es
+totalmente compatible con Unicode, tanto el propio lenguaje como la librería
+estándar.
 
-## What and Why
+## Qué y por qué
 
-Computers, at the lowest level, have no notion of what text is,
-as they only deal with numbers. As a result, computer code needs
-a way to take text data and transform it to and from a binary
-representation. The method of transformation is called an
-*encoding scheme*, and Unicode is one such scheme.
+Los ordenadores, en su más bajo nivel, no tienen noción alguna de qué es texto
+ya que estos sólo funcionan mediante números. Como resultado, el código de los
+ordenadores necesita métodos para coger texto y transformarlo desde y hacia
+una representación binaria. El método usado en esta transformación se llama
+**esquema de codificación**, y Unicode es uno de esos esquemas.
 
-To see the numerical representations underlying the strings in
-the example, simply run the code.
+Para ver la representación numérica que hay debajo de las cadenas de caracteres
+en este ejemplo basta con ejecutar el código.
 
-Unicode is unique in that its design allows it to represent all
-the languages of the world using the same encoding scheme. Before
-Unicode, computers made by different companies or shipped in
-different areas had a hard time communicating, and in some cases
-an encoding scheme wasn't supported at all, making viewing the text
-on that computer impossible.
+Unicode es único en su diseño ya que este permite representar todos los
+idiomas del mundo usando el mismo esquema de codificación. Antes de Unicode
+los ordenadores hechos por diferentes empresas o distribuidos en diferentes
+áreas tenían dificultades para comunicarse ya que no todos eran compatibles
+con los diferentes esquemas de codificación usados. Incluso en algunos de
+ellos era totalmente imposible ver texto creado con otro ordenador.
 
-For more info on Unicode and the technical details, check the
-Wikipedia article on Unicode in the "In-Depth" section.
+Hay más información acerca de Unicode en el artículo de la Wikipedia
+referenciado en la sección “En produndidad” de este artículo.
 
-## How
+## Cómo
 
-Unicode has fixed most of those problems and is supported on every
-modern machine. D learns from the mistakes of older languages,
-as such **all** strings in D are Unicode strings, whereas strings
-in languages such as C and C++ are just arrays of bytes.
+Unicode ha solucionado muchos de esos problemás y está soportado en todos los
+ordenadores modernos. D ha aprendido de los errores de los lenguajes de
+programación más antiguos, por lo que **todas** las cadenas de caracteres
+en D son Unicode, mientras que en lenguajes como C y C++ no son más que arrays
+de bytes.
 
-In D, `string`, `wstring`, and `dstring` are UTF-8, UTF-16, and
-UTF-32 encoded strings respectively. Their character types are
-`char`, `wchar`, and `dchar`.
+En D los tipos de datos `string`, `wstring` y `dstring` son cadenas de
+caracteres codificadas mediante UTF-8, UTF-16 y UTF-32 respectivamente,
+así como el tipo de dato de cada caracter es `char`, `wchar` y `dchar`.
 
-According to the spec, it is an error to store non-Unicode
-data in the D string types; expect your program to fail in
-different ways if your string is encoded improperly.
+De acuerdo con la especificación, es un error guardar datos que no sean
+Unicode en las cadenas de caracteres. Hay que tener en cuenta que los programas
+con cadenas de caracteres que no estén codificadas de forma apropiada fallarán
+de diferentes formas.
 
-In order to store other string encodings, or to obtain C/C++
-behavior, you can use `ubyte[]` or `char*`.
+Para guardar otras codificaciones de caracteres, o para conseguir el mismo
+comportamiento que hay en C/C++, se pueden usar los tipos de datos `ubyte[]`
+o `char*`.
 
-## Strings in Range Algorithms
+## Cadenas de caracteres en los algoritmos que trabajan sobre rangos
 
-*Reading the [gem on range algorithms](gems/range-algorithms) is
-suggested for this section.*
+_Nota: [Algoritmos sobre rangos](gems/range-algorithms) es una lectura
+recomendada de para comprender mejor las implicaciones de esta sección._
 
-There are some important caveats to keep in mind with Unicode
-in D.
+Existen ciertas precauciones importantes a tener en cuenta cuando se trabajo
+con Unicode en D.
 
-First, as a convenience feature, when iterating over a string
-using the range functions, Phobos will encode the elements of
-`string`s and `wstrings` into UTF-32 code-points as each item.
-This practice, known as **auto decoding**, means that
+Primero, como una característica desarrollada por conveniencia, cuando se itera
+sobre una cadena de caracteres usando funciones que se aplican sobre rangos,
+Phobos, la librería estándar, codifica cada elemento de un `string` y de un
+`wstring` en puntos de código de UTF-32. Esta práctica, conocida como
+**decodicación automática** (*auto decoding* en inglés), significa que la
+siguiente expresión no lanzará ningún error:
 
 ```
 static assert(is(typeof(utf8.front) == dchar));
 ```
 
-This behavior has a lot of implications, the main one that
-confuses most people is that `std.traits.hasLength!(string)`
-equals `False`. Why? Because, in terms of the range API,
-`string`'s `length` returns **the number of elements in the string**,
-rather than the number of elements the *range function will iterate over*.
+Este comportamiento tiene muchas implicaciones. La principal, que confunde
+a muchos desarrolladores, es que `std.traits.hasLength!(string)` es igual a
+`False`. ¿A qué se debe? Esto es debido a que, en términos del API de rangos,
+la propiedad `length` de las cadenas de caracteres (`string`s) devuelve
+**el número de elementos de dicha cadena de caracteres**, y no el número de
+elementos del rango sobre el que iteran las funciones.
 
-From the example, you can see why these two things might not always
-be equal. As such, range algorithms in Phobos act as if `string`s
-do not have length information.
+En el ejemplo se puede ver por qué estas dos cosas podrían no ser siempre
+iguales. Como tal, los algoritmos sobre rangos en Phobos actúan como si
+las cadenas de caracteres (`string`s) no tuvieran información sobre su
+longitud.
 
-For more information on the technical details of auto decoding,
-and what it means for your program, check the links in the
-"In-Depth" section.
+En la sección “En profundidad” hay más detalles técnicos sobre la
+decodificación automática y qué implicaciones tiene en los programas.
 
-### In-Depth
+### En profundidad
 
 - [Unicode on Wikipedia](https://en.wikipedia.org/wiki/Unicode)
 - [Basic Unicode Functions in Phobos](https://dlang.org/phobos/std_uni.html)
@@ -89,35 +95,34 @@ import std.range.primitives : empty,
     front, popFront;
 import std.stdio : write, writeln;
 
-void main()
-{
-    string utf8 = "å ø ∑ 😦";
-    wstring utf16 = "å ø ∑ 😦";
-    dstring utf32 = "å ø ∑ 😦";
+void main() {
+    string utf8 = "ñ å ø ∑ 😦";
+    wstring utf16 = "ñ å ø ∑ 😦";
+    dstring utf32 = "ñ å ø ∑ 😦";
 
-    writeln("utf8 length: ", utf8.length);
-    writeln("utf16 length: ", utf16.length);
-    writeln("utf32 length: ", utf32.length);
+    writeln("Longitud utf8: ", utf8.length);
+    writeln("Longitud utf16: ", utf16.length);
+    writeln("Longitud utf32: ", utf32.length);
 
-    foreach (item; utf8)
-    {
+    foreach (item; utf8) {
         auto c = cast(ubyte) item;
         write(c, " ");
     }
     writeln();
 
-    // Because the specified the element type is
-    // dchar, look-ahead is used to encode the
-    // string to UTF-32 code points.
-    // For non-strings, a simple cast is used
-    foreach (dchar item; utf16)
-    {
+    // Debido a que el elemento especificado es
+    // de tipo dchar, se mira más adelante para
+    // codificar la cadena en puntos de código
+    // en UTF-32. Si no son cadenas de
+    // caracteres, es suficiente un `cast`.
+    foreach (dchar item; utf16) {
         auto c = cast(ushort) item;
         write(c, " ");
     }
     writeln();
 
-    // a result of auto-decoding
+    // El resulado de la decodificación
+    // automática.
     static assert(
         is(typeof(utf8[0]) == immutable(char))
     );
