@@ -5,7 +5,7 @@ funciones en tiempo de compilación (CTFE). Gracias a este sistema y a la
 introspección, se pueden tanto escribir programas genéricos como conseguir
 grantes optimizaciones.
 
-## Compromisos explícitos (*explicit contracts*)
+## Contratos explícitos (*explicit contracts*)
 
 Los rasgos en D (*traits* en inglés) permiten especificar de forma explícita
 qué tipos de parámetros se aceptan dentro de las funciones. Por ejemplo,

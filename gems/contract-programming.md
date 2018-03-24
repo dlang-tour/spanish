@@ -1,18 +1,18 @@
-# Programación por compromiso (*contract programming*)
+# Programación por contrato (*contract programming*)
 
-La programación por compromiso (*contract programming* en inglés) en D incluye
+La programación por contrato (*contract programming* en inglés) en D incluye
 un conjunto de construcciones del lenguaje que permiten incrementar la calidad
 del código implementando pruebas para estar seguro de que el código base se
-comporta como se requiere. Los compromisos (*contracts* en inglés) se compilan
+comporta como se requiere. Los contratos (*contracts* en inglés) se compilan
 y se ejecutan cuando se construye el software para pruebas o depuración.
 Cuando se compila para lanzar una versión (activado en el compilador mediante
-la opción `-release`), estos compromisos son totalmente omitidos por el
+la opción `-release`), estos contratos son totalmente omitidos por el
 compilador, por lo que no se deberían usar para validar la entrada de usuario
 o como alternativa a las excepciones.
 
 ### La expresión `assert`
 
-La forma más simple de programación por compromiso en D es la expresión
+La forma más simple de programación por contrato en D es la expresión
 `assert(...)`, que prueba que se cumple cierta condición, abortando la
 ejecución del programa mediante un `AssertError` cuando esta no se cumple.
 
@@ -22,7 +22,7 @@ ejecución del programa mediante un `AssertError` cuando esta no se cumple.
 
 ### Compromisos en las funciones
 
-Las palabras reservadas `in` y `out` permiten formalizar estos compromisos
+Las palabras reservadas `in` y `out` permiten formalizar estos contratos
 para parámetros de entrada y valores de retorno de las funciones.
 
     long square_root(long x)
@@ -52,7 +52,7 @@ pruebas sobre el estado del objeto durante toda su vida. Los invariantes:
 
 ### Validar la entrada de usuario
 
-Como todos los compromisos se eliminan en las versiones finales, la entrada de
+Como todos los contratos se eliminan en las versiones finales, la entrada de
 usuario no se debería validar mediante esta técnica. Por otra parte, las
 expresiones `assert` sí se pueden usar en funciones marcadas como `nothrow`,
 ya que no lanza excepciones sino errores fatales. El análogo en tiempo de
