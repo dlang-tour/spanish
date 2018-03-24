@@ -1,26 +1,29 @@
-# Contract programming
+# Programación por compromiso (*contract programming*)
 
-Contract programming in D includes a set of language constructs that allow increasing the code quality
-by implementing sanity checks that make sure that the code base behaves as intended.
-Contracts are compiled and executed when the software is built for testing or debugging.
-In release builds (enabled by the **-release** switch for DMD) they are completely omitted by the compiler,
-therefore they shouldn't be used to validate user input or as an alternative to using exceptions.
+La programación por compromiso (*contract programming* en inglés) en D incluye
+un conjunto de construcciones del lenguaje que permiten incrementar la calidad
+del código implementando pruebas para estar seguro de que el código base se
+comporta como se requiere. Los compromisos (*contracts* en inglés) se compilan
+y se ejecutan cuando se construye el software para pruebas o depuración.
+Cuando se compila para lanzar una versión (activado en el compilador mediante
+la opción `-release`), estos compromisos son totalmente omitidos por el
+compilador, por lo que no se deberían usar para validar la entrada de usuario
+o como alternativa a las excepciones.
 
-### `assert`
+### La expresión `assert`
 
-The simplest form of contract programming in D is
-the `assert(...)` expression that checks that a certain
-condition is met - and aborts the program with
-an `AssertionError` otherwise.
+La forma más simple de programación por compromiso en D es la expresión
+`assert(...)`, que prueba que se cumple cierta condición, abortando la
+ejecución del programa mediante un `AssertError` cuando esta no se cumple.
 
     assert(sqrt(4) == 2);
-    // optional custom assertion error message
-    assert(sqrt(16) == 4, "sqrt is broken!");
+    // El mensaje de error es opcional.
+    assert(sqrt(16) == 4, "¡sqrt está roto!");
 
-### Function contracts
+### Compromisos en las funciones
 
-`in` and `out` allow to formalize contracts for input
-parameters and return values of functions.
+Las palabras reservadas `in` y `out` permiten formalizar estos comprimisos
+para parámetros de entrada y valores de retorno de las funciones.
 
     long square_root(long x)
     in {
@@ -32,33 +35,31 @@ parameters and return values of functions.
         return cast(long)std.math.sqrt(cast(real)x);
     }
 
-The content in the `in` block could also be expressed
-within the function's body but the intent is much clearer
-this way. In the `out` block the function's return
-value can be captured with `out(result)` and
-verified accordingly.
+El contenido dentro del bloque `in` también se puede poner dentro del cuerpo
+de la función, pero la intención queda mucho más clara de esta forma. En el
+bloque `out`, el valor de retorno de la función se puede capturar mediante la
+expresión `out(result)` y verificar en consecuencia.
 
-### Invariant checking
+### Pruebas invariantes
 
-`invariant()` is a special member function of `struct`
-and `class` types that allows sanity checking an object's
-state during its whole lifetime:
+Mediante la palabra reservada `invariant()` se declara una función miembro
+especial dentro de las estructuras y de las clases que permiten realizar
+pruebas sobre el estado del objeto durante toda su vida. Los invariantes:
 
-* It's called after the constructor has run and before
-  the destructor is called.
-* It's called before entering a member function
-* `invariant()` is called after exiting a member
-  function.
+* Se llaman después del constructor y antes del destructor.
+* Se llaman antes de entrar dentro de una función miembro.
+* Se llaman después de salir de una función miembro.
 
-### Validating user input
+### Validar la entrada de usuario
 
-As all contracts will be removed in the release build, user input should not
-be checked using contracts. Moreover `assert`s can still be used be in
-`nothrow` functions, because they throw fatal `Errors`.
-The runtime analog to `assert` is [`std.exception.enforce`](https://dlang.org/phobos/std_exception.html#.enforce),
-which will throw catchable `Exceptions`.
+Como todos los compromisos se eliminan en las versiones finales, la entrada de
+usuario no se debería validar mediante esta técnica. Por otra parte, las
+expresiones `assert` sí se pueden usar en funciones marcadas como `nothrow`,
+ya que no lanza excepciones sino errores fatales. El análogo en tiempo de
+ejecución a `assert` es la función [`std.exception.enforce`](https://dlang.org/phobos/std_exception.html#.enforce)
+de la librería estándar, ya que lanza excepciones que se pueden atrapar.
 
-### In-depth
+### En profundidad
 
 - [`assert` and `enforce` in _Programming in D_](http://ddili.org/ders/d.en/assert.html)
 - [Contract programming in _Programming in D_](http://ddili.org/ders/d.en/contracts.html)
@@ -72,8 +73,8 @@ which will throw catchable `Exceptions`.
 import std.stdio : writeln;
 
 /**
-Simplified Date type
-Use std.datetime instead
+Tipo de dato Date simplificado.
+(mejor usar std.datetime).
 */
 struct Date {
     private {
@@ -95,23 +96,24 @@ struct Date {
     }
 
     /**
-    Serializes Date object from a
-    YYYY-MM-DD string.
+    Serializa un objeto Date a partir de
+    una cadena con formato 'YYYY-MM-DD'.
 
     Params:
-        date = string to be serialized
+        date = cadena a ser serializada
 
-    Returns: Date object.
+    Returns: objeto Date.
     */
     void fromString(string date)
     in {
         assert(date.length == 10);
     }
-    body {
+    do {
         import std.format : formattedRead;
-        // formattedRead parses the format
-        // given and writes the result to the
-        // given variables
+        // La función `formattedRead` analiza
+        // el formato de cadena dado y escribe
+        // el resultado en las variables
+        // indicadas.
         formattedRead(date, "%d-%d-%d",
             &this.year,
             &this.month,
@@ -119,9 +121,11 @@ struct Date {
     }
 
     /**
-    Serializes Date object to YYYY-MM-DD
+    Serializa un objeto Date a una cadena
+    con el formato 'YYYY-MM-DD'.
 
-    Returns: String representation of the Date
+    Returns: Cadena de caracteres como
+    representación de un objeto Date.
     */
     string toString() const
     out (result) {
@@ -130,14 +134,15 @@ struct Date {
         import std.string : isNumeric;
         import std.array : split;
 
-        // verify we return YYYY-MM-DD
+        // Se verifica que se devuelve
+        // 'YYYY-MM-DD'.
         assert(result.count("-") == 2);
         auto parts = result.split("-");
         assert(parts.map!`a.length`
                     .equal([4, 2, 2]));
         assert(parts.all!isNumeric);
     }
-    body {
+    do {
         import std.format : format;
         return format("%.4d-%.2d-%.2d",
                       year, month, day);
@@ -147,9 +152,10 @@ struct Date {
 void main() {
     auto date = Date(2016, 2, 7);
 
-    // This will make invariant fail.
-    // Don't validate user input with contracts,
-    // throw exceptions instead.
+    // Esto hace que falle el invariante.
+    // No se debe validar la entrada de
+    // usuario mediante invariantes. Para
+    // ello se deben usar excepciones.
     date.fromString("2016-13-7");
 
     date.writeln;
