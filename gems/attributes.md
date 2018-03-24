@@ -22,7 +22,7 @@ por parte de los desarrolladores:
 ### El atributo `@nogc`
 
 Cuando el compilador de D encuentra una función marcada con el atributo
-`@nogc` se asegura que **no hay ninguna** reserva de memoria usando el
+`@nogc` se asegura que **no hay ninguna** asignación de memoria usando el
 recolector de basura (*garbage collector*) dentro del contexto de dicha
 función. Sólo se permite que una función `@nogc` llame a otras funciones
 marcadas con `@nogc`.
@@ -47,7 +47,7 @@ por el usuario (*User-Defined Attributes*, UDA, en inglés):
       }
     }
 
-Cualquier tipo, elemento interno o elemento definido por el usuario puede ser
+Cualquier tipo, elemento básico o elemento definido por el usuario puede ser
 usado como atributo de funciones. La función `foo()` en el ejemplo anterior
 tiene los atributos `"Hola"` (de tipo `string`) y `Bar` (de tipo `Bar` y cuyo
 valor es 10). Para obtener los atributos de una función (o tipo de datos) se

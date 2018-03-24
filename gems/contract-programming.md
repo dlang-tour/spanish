@@ -22,7 +22,7 @@ ejecución del programa mediante un `AssertError` cuando esta no se cumple.
 
 ### Compromisos en las funciones
 
-Las palabras reservadas `in` y `out` permiten formalizar estos comprimisos
+Las palabras reservadas `in` y `out` permiten formalizar estos compromisos
 para parámetros de entrada y valores de retorno de las funciones.
 
     long square_root(long x)

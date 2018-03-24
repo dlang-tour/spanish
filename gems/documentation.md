@@ -5,7 +5,7 @@ dentro del propio lenguaje. Además de la programación por contrato y los
 tests unitarios, D permite generar [documentación](https://dlang.org/phobos/std_variant.html)
 fuera del código fuente de forma nativa.
 
-Usando un esquema estándar para documentar tipos de datosy funciones, el
+Usando un esquema estándar para documentar tipos de datos y funciones, el
 comando `dmd -D` genera convenientemente documentación en HTML basada en
 los archivos de código fuente pasados en la línea de comandos. De hecho,
 toda la [documentación de la librería estándar, Phobos](https://dlang.org/phobos),

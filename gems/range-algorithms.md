@@ -75,7 +75,7 @@ lenguaje de programación de sistemas que
 compila directamente a código máquina
 nativo y eficiente.};
 
-    // Predicado por donde divivir.
+    // Predicado por donde dividir.
     alias pred = c => canFind(" ,.\n", c);
     // Como buen algoritmo, simplemente
     // funciona sin hacer reservas de
@@ -98,7 +98,7 @@ nativo y eficiente.};
       .uniq()
       // Pone en una fila aquellos con el
       // mismo número de caracteres. La
-      // función `chunckBy` ayuda generando
+      // función `chunkBy` ayuda generando
       // rangos de rangos que son cortados
       // según su longitud.
       .chunkBy!(a => a[0])
