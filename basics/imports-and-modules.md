@@ -18,7 +18,7 @@ importación.
 
 Una sentencia `import` **no necesita** estar al principio en un archivo de
 fuentes, sino que puede estar localmente dentro de funciones o cualquier otro
-ámbito. En los próximos capítulos que esto se aplica a casi todos los conceptos
+ámbito. En los próximos capítulos se verá que esto se aplica a casi todos los conceptos
 de D. El lenguaje no impone ninguna restricción arbitraria sobre los
 desarrolladores.
 
