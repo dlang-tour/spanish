@@ -41,7 +41,7 @@ diferentes.
 ### Las importaciones corresponden a directorios y archivos
 
 El sistema de módulos de D, al contrario que en otros sistemas, se basa
-enteramente en archivos. Por ejmplo, `my.cat` siempre se refiere al archivo
+enteramente en archivos. Por ejemplo, `my.cat` siempre se refiere al archivo
 `cat.d` dentro del directorio `my/`. Es necesario que el directorio `my`
 esté en el dictorio de trabajo o en un directorio especificado de forma
 explícita en la lista de directorios a importar (`-I`). Finalmente, para
