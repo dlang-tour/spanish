@@ -27,7 +27,7 @@ referenciado en la sección “En produndidad” de este artículo.
 
 ## Cómo
 
-Unicode ha solucionado muchos de esos problemás y está soportado en todos los
+Unicode ha solucionado muchos de esos problemas y está soportado en todos los
 ordenadores modernos. D ha aprendido de los errores de los lenguajes de
 programación más antiguos, por lo que **todas** las cadenas de caracteres
 en D son Unicode, mientras que en lenguajes como C y C++ no son más que arrays
@@ -121,7 +121,7 @@ void main() {
     }
     writeln();
 
-    // El resulado de la decodificación
+    // El resultado de la decodificación
     // automática.
     static assert(
         is(typeof(utf8[0]) == immutable(char))

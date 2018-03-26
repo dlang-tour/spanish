@@ -3,7 +3,7 @@
 Una de las características más potentes de D es su sistema de evaluación de
 funciones en tiempo de compilación (CTFE). Gracias a este sistema y a la
 introspección, se pueden tanto escribir programas genéricos como conseguir
-grantes optimizaciones.
+grandes optimizaciones.
 
 ## Contratos explícitos (*explicit contracts*)
 
@@ -32,7 +32,7 @@ del módulo `std.algorithm.searching`, que devuelve el prefijo común de dos ran
 
 ```d
 auto commonPrefix(alias pred = "a == b", R1, R2)(R1 r1, R2 r2)
-  if (isForwardRange!R1
+  if (isForwardRange!R1 &&
       isInputRange!R2 &&
       is(typeof(binaryFun!pred(r1.front, r2.front)))) &&
       !isNarrowString!R1)

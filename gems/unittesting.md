@@ -26,7 +26,7 @@ compila y ejecuta los tests unitarios mediante el comando `dub test`.
 
 ### Verificar ejemplos mediante `assert`
 
-Los bloques `unittest` contiene tipicamente expresiones `assert` para probar
+Los bloques `unittest` contiene típicamente expresiones `assert` para probar
 la funcionalidad de una función dada. Estos bloques están generalmente cerca
 de la definición de la función a probar, que puede ser al principio del código
 o, incluso, dentro de clases o estructuras.
@@ -103,8 +103,8 @@ los módulos.
 */
 unittest {
     Vector3 vec;
-    // .init a special built-in property that
-    // returns the initial value of type.
+    // '.init' es una propiedad interna que
+    // devuelve el valor inicial de un tipo.
     assert(vec.x == double.init);
 }
 ```
