@@ -8,7 +8,7 @@ definidos por el usuario. Además, están los atributos `@safe`, `@system` y
 ### El atributo `@property`
 
 Una función marcada con el atributo `@property` se ve como un miembro normal
-por parte de los desarrolladores:
+fuera del contexto donde es declarada:
 
     struct Foo {
         @property bar() { return 10; }
