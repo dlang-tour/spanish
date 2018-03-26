@@ -107,7 +107,7 @@ void main() {
     // `const` puede apuntar a memoria de sólo
     // lectura, pero también es de sólo lectura
     const int* cv = &v;
-    writeln("*cv: ", typeof(cv).stringof);
+    writeln("cv: ", typeof(cv).stringof);
     // *cv = 10; // error
 }
 ```
