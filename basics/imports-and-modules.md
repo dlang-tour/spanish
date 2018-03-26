@@ -18,7 +18,7 @@ importación.
 
 Una sentencia `import` **no necesita** estar al principio en un archivo de
 fuentes, sino que puede estar localmente dentro de funciones o cualquier otro
-ámbito. En los próximos capítulos que esto se aplica a casi todos los conceptos
+ámbito. En los próximos capítulos se verá que esto se aplica a casi todos los conceptos
 de D. El lenguaje no impone ninguna restricción arbitraria sobre los
 desarrolladores.
 
@@ -41,7 +41,7 @@ diferentes.
 ### Las importaciones corresponden a directorios y archivos
 
 El sistema de módulos de D, al contrario que en otros sistemas, se basa
-enteramente en archivos. Por ejmplo, `my.cat` siempre se refiere al archivo
+enteramente en archivos. Por ejemplo, `my.cat` siempre se refiere al archivo
 `cat.d` dentro del directorio `my/`. Es necesario que el directorio `my`
 esté en el dictorio de trabajo o en un directorio especificado de forma
 explícita en la lista de directorios a importar (`-I`). Finalmente, para

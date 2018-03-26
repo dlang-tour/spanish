@@ -73,7 +73,7 @@ import std.stdio : writeln;
 
 void main() {
     /**
-    * Las variables con mutables de forma
+    * Las variables son mutables de forma
     * predeterminada y editarlas está
     * permitido:
     */

@@ -1,6 +1,6 @@
 # Estructuras (*structs*)
 
-Una forma de definir un tipos de datos compuestos o personalizados en D es
+Una forma de definir tipos de datos compuestos o personalizados en D es
 definirlos a través de una estructura mediante la palabra reservada `struct`.
 
     struct Person {
