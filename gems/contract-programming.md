@@ -2,7 +2,7 @@
 
 La programación por contrato (*contract programming* en inglés) en D incluye
 un conjunto de construcciones del lenguaje que permiten incrementar la calidad
-del código implementando pruebas para estar seguro de que el código base se
+del código implementando pruebas para asegurarse de que el código base se
 comporta como se requiere. Los contratos (*contracts* en inglés) se compilan
 y se ejecutan cuando se construye el software para pruebas o depuración.
 Cuando se compila para lanzar una versión (activado en el compilador mediante
@@ -14,13 +14,13 @@ o como alternativa a las excepciones.
 
 La forma más simple de programación por contrato en D es la expresión
 `assert(...)`, que prueba que se cumple cierta condición, abortando la
-ejecución del programa mediante un `AssertError` cuando esta no se cumple.
+ejecución del programa mediante un `AssertError` cuando esta no se satisface.
 
     assert(sqrt(4) == 2);
     // El mensaje de error es opcional.
     assert(sqrt(16) == 4, "¡sqrt está roto!");
 
-### Compromisos en las funciones
+### Contratos en las funciones
 
 Las palabras reservadas `in` y `out` permiten formalizar estos contratos
 para parámetros de entrada y valores de retorno de las funciones.
@@ -38,7 +38,7 @@ para parámetros de entrada y valores de retorno de las funciones.
 El contenido dentro del bloque `in` también se puede poner dentro del cuerpo
 de la función, pero la intención queda mucho más clara de esta forma. En el
 bloque `out`, el valor de retorno de la función se puede capturar mediante la
-expresión `out(result)` y verificar en consecuencia.
+expresión `out(result)` y verificarlo en consecuencia.
 
 ### Pruebas invariantes
 
@@ -55,7 +55,7 @@ pruebas sobre el estado del objeto durante toda su vida. Los invariantes:
 Como todos los contratos se eliminan en las versiones finales, la entrada de
 usuario no se debería validar mediante esta técnica. Por otra parte, las
 expresiones `assert` sí se pueden usar en funciones marcadas como `nothrow`,
-ya que no lanza excepciones sino errores fatales. El análogo en tiempo de
+ya que no lanzan excepciones sino errores fatales. El análogo en tiempo de
 ejecución a `assert` es la función [`std.exception.enforce`](https://dlang.org/phobos/std_exception.html#.enforce)
 de la librería estándar, ya que lanza excepciones que se pueden atrapar.
 

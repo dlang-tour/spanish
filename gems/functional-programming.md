@@ -5,7 +5,7 @@ primera clase para el desarrollo siguiendo un estilo funcional.
 
 En D una función se puede declarar como *pura* mediante la palabra reservada
 `pure`. Esto implica que dados los mismos parámetros de entrada, la salida
-**siempre** será la misma. Las funciones puras no puede acceder ni cambiar
+**siempre** será la misma. Las funciones puras no pueden acceder ni cambiar
 ningún estado global que sea modificable, por lo que desde estas funciones
 sólo se permite llamar a otras funciones puras.
 

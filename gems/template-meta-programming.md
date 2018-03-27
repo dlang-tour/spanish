@@ -1,7 +1,7 @@
 # Metaprogramación mediante plantillas
 
 Si nunca se ha tenido contacto con la metaprogramación mediante plantillas
-(*template meta programming* en inglés) en C++, se puede sentir aliviado
+(*template meta programming* en inglés) en C++, se puede sentir alivio
 gracias a las herramientas que ofrece D para hacer la vida más fácil. La
 metaprogramación mediante plantillas es una técnica que permite la toma de
 decisiones dependiendo del tipo de plantilla, permitiendo así hacer que los
@@ -25,7 +25,7 @@ genérica de ayuda que evalúa condiciones en tiempo de compilación.
         int x = 10;
     }
 
-Las llaves ({}) se omiten si la condición es verdadera (`true`), es decir,
+Las llaves (`{}`) se omiten si la condición es verdadera (`true`), es decir,
 no se crea un ámbito nuevo. Si se quiere crear un ámbito nuevo, hay que
 hacerlo de forma explítica declarando un bloque mediante `{ {` y `} }`.
 
@@ -62,7 +62,7 @@ pueden contener llamadas a otras funciones que puedan ser evaluadas en tiempo
 de compilación. Por ejemplo, la función `std.range.primitives.isRandomAccessRange`
 comprueba si un tipo de dato es un rango que soporta el operador `[]`.
 
-### En profundidad
+## En profundidad
 
 ### Referencias básicas
 

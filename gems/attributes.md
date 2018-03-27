@@ -22,7 +22,7 @@ fuera del contexto donde es declarada:
 ### El atributo `@nogc`
 
 Cuando el compilador de D encuentra una función marcada con el atributo
-`@nogc` se asegura que **no hay ninguna** asignación de memoria usando el
+`@nogc` se asegura de que **no hay ninguna** asignación de memoria usando el
 recolector de basura (*garbage collector*) dentro del contexto de dicha
 función. Sólo se permite que una función `@nogc` llame a otras funciones
 marcadas con `@nogc`.
