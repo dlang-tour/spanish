@@ -15,8 +15,8 @@ la compilación.
 
 Palabras reservadas como `static`, `immutable` o `enum` indican al compilador
 que use CTFE cuando sea posible. Lo bueno de esta técnica es que no se
-necesita reescribir las funciones para ser usada, además de que perfectamente
-se puede compartir el código:
+necesita reescribir las funciones para ser usada, además de que este código
+se puede compartir sin ningún problema:
 
     int n = doSomeRuntimeStuff();
     // La misma función que antes, sólo que esta vez se
@@ -36,7 +36,7 @@ que sólo están disponibles en tiempo de ejecución.
     // pero 'ctr' es más rápida.
 
 No todas las características del lenguaje están disponibles para CTFE, pero
-el soporte de esta característica por parte del lenguaje se incremente con
+el soporte de esta característica por parte del lenguaje se incrementa con
 cada nueva versión del compilador.
 
 ### En profundidad

@@ -1,4 +1,4 @@
-# Tipos básicos
+# Tipos de datos básicos
 
 D proporciona varios tipos de datos básicos que siempre tienen el mismo
 tamaño **independientemente** de la plataforma, siendo el

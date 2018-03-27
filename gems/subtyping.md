@@ -19,7 +19,7 @@ un número entero normal.
 
 Esto permite extender otros tipos de datos con nueva funcionalidad pero con
 cero sobrecarca en términos de memoria o tiempo de ejecución. El compilador se
-asegura de realizar las operaciones correctas cuando se acceder a los miembros
+asegura de realizar las operaciones correctas cuando se accede a los miembros
 marcados con `alias this`.
 
 La construcción `alias this` también funciona con clases.

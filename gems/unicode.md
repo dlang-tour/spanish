@@ -48,10 +48,10 @@ o `char*`.
 
 ## Cadenas de caracteres en los algoritmos que trabajan sobre rangos
 
-_Nota: [Algoritmos sobre rangos](gems/range-algorithms) es una lectura
+_NOTA:_ [_Algoritmos sobre rangos_](gems/range-algorithms) _es una lectura
 recomendada de para comprender mejor las implicaciones de esta sección._
 
-Existen ciertas precauciones importantes a tener en cuenta cuando se trabajo
+Existen ciertas precauciones importantes a tener en cuenta cuando se trabaja
 con Unicode en D.
 
 Primero, como una característica desarrollada por conveniencia, cuando se itera
@@ -67,7 +67,7 @@ static assert(is(typeof(utf8.front) == dchar));
 
 Este comportamiento tiene muchas implicaciones. La principal, que confunde
 a muchos desarrolladores, es que `std.traits.hasLength!(string)` es igual a
-`False`. ¿A qué se debe? Esto es debido a que, en términos del API de rangos,
+`False`. Esto es debido a que, en términos del API de rangos,
 la propiedad `length` de las cadenas de caracteres (`string`s) devuelve
 **el número de elementos de dicha cadena de caracteres**, y no el número de
 elementos del rango sobre el que iteran las funciones.
