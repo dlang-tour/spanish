@@ -92,7 +92,7 @@ las [cadenas *heredoc*](http://dlang.org/spec/lex.html#delimited_strings).
 
 ### Cadenas *wysiwyg*
 
-También es posible usar *raw strings* (cadenas sin procesar) para minimar la
+También es posible usar *raw strings* (cadenas sin procesar) para minimizar la
 laboriosa tarea de *escapar* (*escape*) símbolos reservados. Las cadenas sin
 procesar pueden ser declaradas o bien usando acentos graves —*backticks* en
 inglés— (`` ` ... ` ``) o bien usando el prefijo `r` —de *raw*— (`r" ... "`).
@@ -129,7 +129,7 @@ void main() {
         "Wörld");
     writeln("Mi cadena: ", str);
     writeln("Longitud del array (contador de"
-        ~ " unicades de código) del string: ",
+        ~ " unidades de código) del string: ",
         str.length);
     writeln("Longitud del rango (contador de "
         ~ "puntos de código) del string: ",

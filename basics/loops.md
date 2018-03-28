@@ -42,7 +42,7 @@ sección siguiente:
 #### Palabras reservadas (*keywords*) y etiquetas
 
 La palabra reservada `break` aborta inmediatamente el bucle actual. En
-un bucle anidaddo se puede indicar una **etiqueta** para saber a qué parte del
+un bucle anidado se puede indicar una **etiqueta** para saber a qué parte del
 bucle exterior hay que ir cuando se rompe el bucle interior:
 
     outer: for (int i = 0; i < 10; ++i) {

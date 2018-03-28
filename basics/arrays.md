@@ -6,7 +6,7 @@ compilador se asegura de que esta comprobación no es necesaria).
 Si esta comprobación de límites falla, se lanza una excepción de tipo `RangeError`
 que aborta la ejecución de la aplicación. El programador valiente puede desactivar
 esta comprobación de seguridad mediante la opción `-boundscheck=off` del compilador
-con el fin de mejorar la velocidad de ejecuión, pero a costa de la seguridad.
+con el fin de mejorar la velocidad de ejecución, pero a costa de la seguridad.
 
 #### Arrays estáticos
 
@@ -47,7 +47,7 @@ etc. Además, también es posible ejecutar operaciones en todo el array con un
 valor único:
 
     a[] *= 2; // multiplica todos los elementos por 2
-    a[] %= 26; // calcula el módulo entre 26 de todos los elementos de a
+    a[] %= 26; // calcula el módulo 26 de todos los elementos de a
 
 Estas operaciones pueden ser optimizadas por el compilador usando instrucciones
 especiales del procesador realizando dichas operaciones en paralelo.
@@ -90,8 +90,7 @@ Los caracteres están limitados al rango
 
 Params:
     input = array para ser cifrado
-    shift = shift distancia a mover cada
-        caracter
+    shift = distancia a mover cada caracter
 Returns:
     El array con los caracteres movidos
 */
