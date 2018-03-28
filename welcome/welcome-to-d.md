@@ -61,16 +61,17 @@ void main()
     // ¡Empecemos!
     writeln("¡Hola, mundo!");
 
-    // Ejemplo para programadores experimentados:
-    // Tomar tres arrays, y sin reservar nueva
-    // memoria, ordenarlos en el lugar
+    // Ejemplo para programadores 
+    // experimentados: Tomar tres arrays, y
+    // sin reservar nueva memoria, ordenarlos
+    // en el lugar
     int[] arr1 = [4, 9, 7];
     int[] arr2 = [5, 2, 1, 10];
     int[] arr3 = [6, 8, 3];
     sort(chain(arr1, arr2, arr3));
     writefln("%s\n%s\n%s\n", arr1, arr2, arr3);
-    // Para aprender más acerca de este ejemplo,
-    // véase la sección "Algoritmos sobre rangos"
-    // bajo "Perlas"
+    // Para aprender más acerca de este 
+    // ejemplo, véase la sección 
+    // "Algoritmos sobre rangos" bajo "Perlas"
 }
 ```
