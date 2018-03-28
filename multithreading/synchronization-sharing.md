@@ -23,7 +23,7 @@ ejecución tiene su propia copia.
 
 Los bloques marcados con la palabra reservada `synchronized` le indican al
 compilador que dicho bloque es una sección crítica y que sólo un hilo de
-ejecicón puede acceder a ella al mismo tiempo.
+ejecución puede acceder a ella al mismo tiempo.
 
     synchronized {
         importStuff();

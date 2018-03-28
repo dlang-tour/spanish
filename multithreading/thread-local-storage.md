@@ -1,6 +1,6 @@
 # Almacenamiento local de los hilos de ejecución
 
-La palabra reservada `static`, que modifica la forma en cómo se guardan las
+La palabra reservada `static`, que modifica la forma como se guardan las
 variables, permite declarar objetos que son inicializados solamente una vez.
 Si la misma línea de código se ejecuta una segunda vez, la inicialización se
 omite.

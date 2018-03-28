@@ -4,7 +4,7 @@ Las fibras (*fibers* en inglés) son una forma de implementar concurrencia de
 una forma **cooperativa**. La clase `Fiber` se define en el módulo
 [`core.thread`](https://dlang.org/phobos/core_thread.html).
 
-La idea básica es que cuando una fibra no tiene nada que hacer o esta esperando
+La idea básica es que cuando una fibra no tiene nada que hacer o está esperando
 por entrada del usuario, esta concede de forma **activa** su tiempo de ejecución
 para que otras tareas lo puedan usar llamando a la función `Fiber.yeld()`.
 El contexto padre obtiene el control, aunque el estado de dicha fibra (todas
