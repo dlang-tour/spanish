@@ -1,10 +1,10 @@
 # Slices
 
 Los *slices* son objetos de tipo `T[]` para cualquier tipo `T` que proporcionan
-una vista de un subconjunto de un archivo de valores de tipo `T`, o
+una vista de un subconjunto de un array de valores de tipo `T`, o
 simplemente una vista del array completo.
 
-**Los _slices_ y los arrays dinámicos son la misma cosa.**
+**Los *slices* y los arrays dinámicos son la misma cosa.**
 
 Un *slice* está formado por dos miembros: un puntero al primer elemento y
 otro elemento con la longitud de dicho *slice*:

@@ -121,7 +121,7 @@ void main() {
     vec2.z = 0;
 
     // Si una función miembro no tiene
-    // parametros se pueden omitir los
+    // parámetros se pueden omitir los
     // paréntesis de llamada: ()
     assert(vec1.length == 10);
     assert(vec2.length == 20);

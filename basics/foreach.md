@@ -31,7 +31,7 @@ verá en la [siguiente sección](basics/ranges).
 
 Durante la iteración, los elementos del array son copiados. Esto es aceptable
 para tipos de datos básicos, pero podría ser un problema para tipos de datos
-grandes. Para prevenir esta copia y/o para activar la edición de los datos
+grandes. Para prevenir esta copia y/o para habilitar la edición de los datos
 dentro del propio bucle, se usa la palabra reservada `ref`:
 
     foreach (ref e; arr) {
