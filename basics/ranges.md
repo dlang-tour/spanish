@@ -193,7 +193,7 @@ void main() {
     writeln("Sum of FibEven: ", fibEven.sum);
 
     // Generalmente todo esto se escribe así:
-    fib10.take(10)
+    fib.take(10)
          .drop(5)
          .filter!(x => x % 2)
          .sum
