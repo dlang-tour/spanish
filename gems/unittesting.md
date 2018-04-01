@@ -35,7 +35,7 @@ o, incluso, dentro de clases o estructuras.
 
 Los tests unitarios son una herramienta muy potente para crear aplicaciones
 a prueba de bala. Una medida común para probar cuánto código fuente de un
-programa está cubierto por los tests la _cobertura del código_ (***code
+programa está cubierto por los tests es la _cobertura del código_ (***code
 coverage*** en inglés). El compilador DMD permite generar de forma sencilla
 informes de cobertura de código mediante la opción `-cov`. Para cada módulo
 se genera un archivo con extensión `.lst` que contiene estadísticas detalladas
@@ -95,7 +95,7 @@ void main() {
 
 /*
 O en cualquier otro sitio. Nada de esto
-se compila ni se incluye en código normal.
+se compila ni se incluye en el código normal.
 Se puede ejecutar `dub test` de forma
 local o se puede compilar con `-unittest`
 para ejecutar los tests unitarios y probar

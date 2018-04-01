@@ -33,7 +33,7 @@ aplica a cada elemento del rango:
 
     theBigBigRange.take(10);
 
-`zip`: itera sobre dos rangos en paralelo devolviendo un un rango de tuplas
+`zip`: itera sobre dos rangos en paralelo devolviendo un rango de tuplas
 con cada pareja de elementos:
 
     assert(zip([1,2], ["hello","world"]).front

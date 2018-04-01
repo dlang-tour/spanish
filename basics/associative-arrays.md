@@ -65,11 +65,11 @@ void main() {
                        key, value);
 
     // Las propiedades `.keys` y `.values`
-    // devuelve arrays
+    // devuelven arrays
     writeln("Palabras: ", words.keys);
 
     // `.byKey`, `.byValue` y `.byKeyValue`
-    // devuelven rangos iterables (y _vagos_).
+    // devuelven rangos iterables (y perezosos).
     writeln("# Palabras: ", words.byValue.sum);
 
     // Se puede crear un nuevo array asociativo

@@ -1,6 +1,6 @@
 # Sintaxis uniforme de llamada a funciones (*Uniform Function Call Syntax*, UFCS)
 
-**UFCS** es una característica clave en D que activa la reusabilidad y la
+**UFCS** es una característica clave en D que habilita la reusabilidad y la
 escalabilidad del código a través de encapsulación bien definida.
 
 UFCS permite que cualquier llamada a una función libre, `fun(a)`, pueda ser
