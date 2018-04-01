@@ -97,7 +97,6 @@ auto getMathOperation(IntOps op) {
 
     // nos aseguramos de que el switch cubre
     // todos los casos posibles
-    // all cases
     final switch (op) {
         case IntOps.add:
             return add;

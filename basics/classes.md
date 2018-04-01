@@ -81,7 +81,7 @@ Elegante tipo que puede ser usado
 para cualquier cosa...
 */
 class Any {
-    // El atribute `protected` hace que sólo
+    // El atributo `protected` hace que sólo
     // vean estas propiedades las clases
     // que heredan de esta.
     protected string type;
