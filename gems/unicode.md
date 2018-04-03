@@ -49,7 +49,7 @@ o `char*`.
 ## Cadenas de caracteres en los algoritmos que trabajan sobre rangos
 
 _NOTA:_ [_Algoritmos sobre rangos_](gems/range-algorithms) _es una lectura
-recomendada de para comprender mejor las implicaciones de esta sección._
+recomendada para comprender mejor las implicaciones de esta sección._
 
 Existen ciertas precauciones importantes a tener en cuenta cuando se trabaja
 con Unicode en D.

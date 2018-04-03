@@ -43,7 +43,7 @@ Esto significa que esta función sólo se puede llamar y sólo compila si:
 - `r1` se puede guardar (se garantiza mediante `isForwardRange`).
 - `r2` es iterable (se garantiza mediante `isInputRange`).
 - `pred` se puede llamar con elementos de tipo `r1` y `r2`.
-- `r1` no es una cadena _estrecha_ (_narrow string_ en inglés) (`char[]`,`string`, `wchar` or `wstring`). Esto se hace por simplicidad, ya que si no fuese así se necesitaría decodificación adicional.
+- `r1` no es una cadena _estrecha_ (_narrow string_ en inglés) (`char[]`,`string`, `wchar` o `wstring`). Esto se hace por simplicidad, ya que si no fuese así se necesitaría decodificación adicional.
 
 ### Especialización
 
