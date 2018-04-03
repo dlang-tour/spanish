@@ -31,7 +31,7 @@ que permite acceder de forma transparente a listas guardadas en Redis.
 El soporte para bases de datos MySQL sin dependencias externas contra la
 biblioteca oficial de MySQL se consigue gracias al proyecto
 [mysql-native](http://code.dlang.org/packages/mysql-native). También soporta
-conexiones no bloquenates mediante *sockets* de vibe.d.
+conexiones no bloqueantes mediante *sockets* de vibe.d.
 
 ### Postgresql
 

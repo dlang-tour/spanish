@@ -70,7 +70,7 @@ Aquí el nombre de la aplicación es *rocky-hamlet-67506*.
 
 Para desplegar la aplicación se usan directamente comandos de `git`. Se debería
 añadir un nuevo servidor remoto de Git donde se publiquen las versiones finales.
-Este nuevo remoto tiene el nombre de la aplicación indicado en el punto
+Este nuevo servidor remoto tiene el nombre de la aplicación indicado en el punto
 anterior (en este caso es *rocky-hamlet-67506*).
 
 

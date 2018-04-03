@@ -18,7 +18,7 @@ están basadas en las [plantillas Jade](http://jade-lang.com/).
         body#body-id.the-style
           h1 Plantilla DIET
 
-La sintaxis es sensible a la indentación y no es necesario poner las las
+La sintaxis es sensible a la indentación y no es necesario poner las
 etiquetas de cierre.
 
 Todas las plantillas DIET se compilan y se mantienen en memoria para obtener

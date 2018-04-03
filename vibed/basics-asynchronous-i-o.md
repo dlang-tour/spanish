@@ -46,7 +46,7 @@ import vibe.d;
 shared static this() {
     // Escucha en el puerto 8080 (TCP).
     // Cada vez que llega una nueva
-    // conexión, esta se gestiona mendiante
+    // conexión, esta se gestiona mediante
     // un `delegate` que se especifica en el
     // segundo parámetro. El parámetro `conn`
     // es el objeto que representa la conexión
