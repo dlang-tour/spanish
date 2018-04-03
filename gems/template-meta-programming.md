@@ -101,7 +101,7 @@ struct Vector3(T)
     'setters' porque el código repetitivo
     es odioso.
 
-    var -> T getVAR() and void setVAR(T)
+    var -> T getVAR() y void setVAR(T)
     */
     mixin template GetterSetter(string var) {
         // Se usa un `mixin` para construir
@@ -138,8 +138,8 @@ struct Vector3(T)
 void main() {
     auto vec = Vector3!double(3,3,3);
     // Esto no funciona debido a las
-    // restricciones de la plantilla.
-    // Vector3!string illegal;
+    // restricciones de la plantilla
+    // Vector3!string es ilegal.
 
     auto vec2 = Vector3!double(4,4,4);
     writeln("vec dot vec2 = ", vec.dot(vec2));

@@ -14,7 +14,7 @@ pero sólo para el hilo actual.
 
 Esto es diferente a cómo funciona `static` en C/C++ y Java, donde los objetos
 declarados como estáticos son globales a toda la aplicación, no sólo al hilo
-actual. Esto implica problemas de sincrinización en aplicaciones multihilo.
+actual. Esto implica problemas de sincronización en aplicaciones multihilo.
 
 El valor asignado a variables declaradas como `static` tiene que ser evaluable
 en tiempo de compilación, es decir, no debe tener dependencias en tiempo de
@@ -67,7 +67,6 @@ void worker(bool firstTime) {
 void main() {
     // Se crean 5 hilos donde cada uno
     // llama a la función 'worker(true,i)'.
-    // worker(true,i) each.
     for (size_t i = 0; i < 5; ++i) {
         spawn(&worker, true);
     }
