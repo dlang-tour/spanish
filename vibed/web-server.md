@@ -23,7 +23,7 @@ URL como funciones miembro:
     router.registerWebInterface(new WebService);
     listenHTTP(settings, router);
 
-Las funciones que de la clase `WebService` que se ejecutarán según las rutas
+Las funciones de la clase `WebService` que se ejecutarán según las rutas
 introducidas se deducen según un esquema muy simple:
 
 * `index()` gestionará las peticiones a `/index`.

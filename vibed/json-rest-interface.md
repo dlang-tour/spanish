@@ -39,7 +39,7 @@ Lo primero que hay que hacer es definir una interfaz que implemente la función
         Chapter[] getChapters();
     }
 
-Para rellear las estructuras con datos hay que heredar de la interfaz e
+Para rellenar las estructuras con datos hay que heredar de la interfaz e
 implementar la lógica de negocio:
 
     class Rest: IRest {

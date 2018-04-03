@@ -32,7 +32,7 @@ el prefijo `-` en cada una de ellas:
       h1 #{title}
 
 También se pueden usar expresiones complejas de la misma forma, e incluso se
-pueden definir funciones que se pueden usar para generar HTML final.
+pueden definir funciones que se pueden usar para generar el HTML final.
 
 Las plantillas DIET se compilan usando **CTFE** y tienen que estar en el
 directorio `views` de los proyectos vibe.d estándar. Para generar el HTML de

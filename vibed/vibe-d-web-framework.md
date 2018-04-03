@@ -10,7 +10,7 @@ más destacables son:
   pero el marco realiza toda la ingrata gestión asíncrona en segundo plano.
   En la sección siguiente se muestra un ejemplo de ello.
 * Generador de JSON e interfaz web fácil de usar.
-* Soporte inmedianto y listo para usar de Redis y MongoDB con lo que crear
+* Soporte inmediato y listo para usar de Redis y MongoDB, con lo que crear
   sistemas de *backend* con buen rendimiento.
 * Se pueden escribir clientes y servidores TCP y UDP genéricos.
 
