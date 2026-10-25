@@ -50,8 +50,8 @@ tener el archivo `cat.d`, se puede usar el directorio `cat/`. De esta forma,
 el compilador de D tratará de cargar el archivo `my/cat/package.d` en lugar
 de `my/cat.d`.
 
-The convention (but not a hard rule) for `package.d` files is to publicly import
-all other modules in the same folder.
+La convención (aunque no una regla estricta) para los archivos `package.d` consiste en importar públicamente
+todos los demás módulos que se encuentren en la misma carpeta.
 
 ## {SourceCode}
 
